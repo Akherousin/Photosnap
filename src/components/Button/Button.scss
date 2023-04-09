@@ -2,15 +2,20 @@
   padding-block: 12px;
   padding-inline: 24px;
   min-width: 158px;
+  min-height: 40px;
   border: none;
   font-size: var(--font-size-heading-xs);
+  line-height: 15.62px;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-lg);
-  transition: all 150ms ease-in;
+  letter-spacing: var(--letter-spacing-md);
 
-  &:hover {
-    transition: all 50ms ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 150ms ease-in;
+
+    &:hover {
+      transition: all 50ms ease-out;
+    }
   }
 
   &--dark {

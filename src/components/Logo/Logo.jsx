@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Logo() {
   return (
-    <Link to="/">
+    <Link to="/" aria-label="Photosnap">
       <img src={logo} alt="photosnap logo" aria-hidden="true" />
     </Link>
   );

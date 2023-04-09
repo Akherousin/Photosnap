@@ -1,0 +1,57 @@
+@import '../../mixins.scss';
+
+.header {
+  padding-block: 16px;
+
+  /* Where: calc = min_font_size_in_rem + (max_font_size - min_font_size) * ((100vw - min_viewport_including_px_unit) / (max_viewport - min_viewport)) */
+  padding-inline: clamp(
+    40px,
+    calc(2.5rem + (165 - 40) * ((100vw - 768px) / (1440 - 768))),
+    165px
+  );
+  background-color: var(--color-white);
+
+  @media screen and (max-width: 48rem) {
+    padding-inline: clamp(24px, calc(1.5rem + ((1vw - 6.6px) * 14.8148)), 40px);
+  }
+
+  @media screen and (max-width: 40.465rem) {
+    display: none;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: calc(1120rem / 16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: clamp(12px, calc(0.75rem + ((1vw - 7px) * 36.7647)), 37px);
+    text-transform: uppercase;
+  }
+
+  &__link {
+    @include heading-xsmall;
+
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: var(--color-grey);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: color 150ms ease-in;
+
+      &:hover {
+        transition: color 50ms ease-out;
+      }
+    }
+  }
+}

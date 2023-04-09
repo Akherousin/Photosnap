@@ -1,23 +1,33 @@
 import Button from '../Button';
 import Logo from '../Logo';
 import { Link } from 'react-router-dom';
-import './Header.scss';
+import styles from './Header.module.scss';
 
 function Header() {
   return (
-    <header role="banner" aria-label="Site header" className="header">
-      <div className="container">
+    <header role="banner" aria-label="Site header" className={styles.header}>
+      <div className={styles.container}>
         <Logo />
-        <nav role="navigation" aria-label="Main navigation">
-          <ul>
+        <nav
+          role="navigation"
+          aria-label="Main navigation"
+          className={styles.nav}
+        >
+          <ul className={styles.nav__list}>
             <li>
-              <Link to="/stories">Stories</Link>
+              <Link to="/stories" className={styles.nav__link}>
+                Stories
+              </Link>
             </li>
             <li>
-              <Link to="/features">Features</Link>
+              <Link to="/features" className={styles.nav__link}>
+                Features
+              </Link>
             </li>
             <li>
-              <Link to="/pricing">Pricing</Link>
+              <Link to="/pricing" className={styles.nav__link}>
+                Pricing
+              </Link>
             </li>
           </ul>
         </nav>

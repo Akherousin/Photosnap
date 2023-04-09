@@ -8,6 +8,21 @@
   position: absolute;
   width: 1px;
 }
+.click-target-helper {
+  position: relative;
+}
+
+.click-target-helper::after {
+  --click-target-minimum: 44px;
+  --inset-by: min(0px, calc((100% - var(--click-target-minimum)) / 2));
+
+  content: '';
+  position: absolute;
+  top: var(--inset-by);
+  left: var(--inset-by);
+  right: var(--inset-by);
+  bottom: var(--inset-by);
+}
 
 .heading-large {
   font-size: var(--font-size-heading-lg);

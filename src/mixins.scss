@@ -1,0 +1,6 @@
+@mixin heading-xsmall {
+  font-size: var(--font-size-heading-xs);
+  font-weight: bold;
+  line-height: var(--line-height-sm);
+  letter-spacing: var(--letter-spacing-md);
+}
