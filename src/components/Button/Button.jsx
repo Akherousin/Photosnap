@@ -1,4 +1,4 @@
-import './Button.scss';
+import styles from './Button.module.scss';
 import classNames from 'classnames';
 
 const possibleVariants = ['dark', 'light'];
@@ -14,8 +14,8 @@ function Button({ variant = 'dark', hasIcon = false, children, ...rest }) {
     throw new Error('Invalid prop: hasIcon must be a boolean');
   }
 
-  const classes = classNames('button', `button--${variant}`, {
-    'button--icon': hasIcon,
+  const classes = classNames(styles.button, styles[`button--${variant}`], {
+    [styles['button--icon']]: hasIcon,
   });
 
   return (

@@ -1,13 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
-import Header from './components/Header';
-import MobileHeader from './components/MobileHeader';
+import SuperHeader from './components/SuperHeader';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
-        <MobileHeader />
+        <SuperHeader />
       </BrowserRouter>
     </div>
   );
