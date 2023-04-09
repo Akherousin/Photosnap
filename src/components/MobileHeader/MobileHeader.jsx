@@ -8,16 +8,16 @@ import Button from '../Button';
 
 function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-  const menuBtn = useRef(null);
+  const menuRef = useRef();
+  const menuBtn = useRef();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
 
-    if (isMenuOpen) {
+    if (isMenuOpen && menuBtn.current) {
       // move focus back to the button
       menuBtn.current.focus();
-    } else {
+    } else if (!isMenuOpen && menuRef.current) {
       // move focus to the menu
       menuRef.current.focus();
     }
