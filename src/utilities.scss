@@ -1,0 +1,44 @@
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.heading-large {
+  font-size: var(--font-size-heading-lg);
+  font-weight: bold;
+  line-height: var(--line-height-lg);
+  letter-spacing: var(--letter-spacing-lg);
+}
+
+.heading-medium {
+  font-size: var(--font-size-heading-md);
+  font-weight: bold;
+  line-height: var(--line-height-md);
+  letter-spacing: var(--letter-spacing-sm);
+}
+
+.heading-small {
+  font-size: var(--font-size-heading-sm);
+  font-weight: bold;
+  line-height: var(--line-height-md);
+  letter-spacing: var(--letter-spacing-sm);
+}
+
+.heading-xsmall {
+  font-size: var(--font-size-heading-xs);
+  font-weight: bold;
+  line-height: var(--line-height-sm);
+  letter-spacing: var(--letter-spacing-md);
+}
+
+.text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-md);
+  letter-spacing: var(--letter-spacing-sm);
+}

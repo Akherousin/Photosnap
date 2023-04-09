@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
 :root {
+  //  COLORS
   --color-black: hsl(0, 0, 0);
   --color-grey: hsl(0, 0, 87%);
   --color-white: hsl(0, 0, 100%);
+
+  // TYPOGRAPHY
+  --font-family: 'DM Sans', sans-serif;
+  --font-size-base: calc(15rem / 16);
+  --font-size-heading-lg: calc(40rem / 16);
+  --font-size-heading-md: calc(24rem / 16);
+  --font-size-heading-sm: calc(18rem / 16);
+  --font-size-heading-xs: calc(12rem / 16);
+
+  --line-height-lg: calc(48rem / 16);
+  --line-height-md: calc(25rem / 16);
+  --line-height-sm: calc(16rem / 16);
+
+  --letter-spacing-lg: calc(4.17rem / 16);
+  --letter-spacing-md: calc(2rem / 16);
+  --letter-spacing-sm: 0rem;
 }
