@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
 :root {
-  //  COLORS
-  --color-black: hsl(0, 0, 0);
-  --color-grey: hsl(0, 0, 87%);
-  --color-white: hsl(0, 0, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-grey: hsl(0, 0%, 87%);
+  --color-white: hsl(0, 0%, 100%);
 
-  // TYPOGRAPHY
   --font-family: 'DM Sans', sans-serif;
   --font-size-base: calc(15rem / 16);
   --font-size-heading-lg: calc(40rem / 16);
