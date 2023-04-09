@@ -2,37 +2,56 @@ import Logo from '../Logo/Logo';
 import close from '../../assets/shared/mobile/close.svg';
 import menu from '../../assets/shared/mobile/menu.svg';
 import styles from './MobileHeader.module.scss';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button';
 
 function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const menuBtn = useRef(null);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+
+    if (isMenuOpen) {
+      // move focus back to the button
+      menuBtn.current.focus();
+    } else {
+      // move focus to the menu
+      menuRef.current.focus();
+    }
+  };
 
   return (
     <>
       {isMenuOpen && (
-        <div
-          className={styles.overlay}
-          onClick={() => setIsMenuOpen(false)}
-        ></div>
+        <div className={styles.overlay} onClick={toggleMenu}></div>
       )}
       <header className={styles.header}>
         <Logo />
         <button
+          ref={menuBtn}
           className={`${styles.menu__button} click-target-helper`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={toggleMenu}
           aria-expanded={isMenuOpen}
         >
           <span className="visually-hidden">
             {isMenuOpen ? 'Close menu' : 'Open menu'}
           </span>
-          <img alt="" src={isMenuOpen ? close : menu} />
+          <img alt="" src={isMenuOpen ? close : menu} aria-hidden="true" />
         </button>
 
         {isMenuOpen && (
-          <div className={styles.menu} aria-labelledby="menu-button">
+          <div
+            className={styles.menu}
+            aria-labelledby="menu-button"
+            role="dialog"
+            tabIndex="-1"
+            ref={menuRef}
+          >
             <div className={styles.menu__content}>
+              <h2 className="visually-hidden">Main menu</h2>
               <nav className={styles.nav}>
                 <ul className={styles.nav__list}>
                   <li>
