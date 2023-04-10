@@ -29,6 +29,12 @@
   font-weight: bold;
   line-height: var(--line-height-lg);
   letter-spacing: var(--letter-spacing-lg);
+
+  @media screen and (max-width: 40.465rem) {
+    font-size: var(--font-size-heading-lg-mob);
+    line-height: var(--line-heiht-lg-mob);
+    letter-spacing: var(--letter-spacing-lg-mob);
+  }
 }
 
 .heading-medium {

@@ -4,19 +4,23 @@
   --color-black: hsl(0, 0%, 0%);
   --color-grey: hsl(0, 0%, 87%);
   --color-white: hsl(0, 0%, 100%);
+  --main-accent: hsl(28, 100%, 79%), hsl(329, 36%, 59%), hsl(229, 100%, 67%);
 
   --font-family: 'DM Sans', sans-serif;
   --font-size-base: calc(15rem / 16);
   --font-size-heading-lg: calc(40rem / 16);
+  --font-size-heading-lg-mob: calc(32rem / 16);
   --font-size-heading-md: calc(24rem / 16);
   --font-size-heading-sm: calc(18rem / 16);
   --font-size-heading-xs: calc(12rem / 16);
 
   --line-height-lg: calc(48rem / 16);
+  --line-height-lg-mb: calc(40rem / 16);
   --line-height-md: calc(25rem / 16);
   --line-height-sm: calc(16rem / 16);
 
   --letter-spacing-lg: calc(4.17rem / 16);
+  --letter-spacing-lg-mob: calc(3.33rem / 16);
   --letter-spacing-md: calc(2rem / 16);
   --letter-spacing-sm: 0rem;
 }
