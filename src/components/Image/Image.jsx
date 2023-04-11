@@ -1,4 +1,11 @@
-function Image({ pageName, imageName, alt, pictureClassName, ...rest }) {
+function Image({
+  pageName,
+  imageName,
+  noTabletSizes,
+  alt,
+  pictureClassName,
+  ...rest
+}) {
   return (
     <picture className={pictureClassName}>
       <source
@@ -9,7 +16,9 @@ function Image({ pageName, imageName, alt, pictureClassName, ...rest }) {
       <source
         media="(max-width: 48rem)"
         type="image/avif"
-        srcSet={`/src/assets/${pageName}/tablet/${imageName}.avif`}
+        srcSet={`/src/assets/${pageName}/${
+          noTabletSizes ? 'desktop' : 'tablet'
+        }/${imageName}.avif`}
       />
       <source
         media="(max-width: 90rem)"
@@ -25,7 +34,9 @@ function Image({ pageName, imageName, alt, pictureClassName, ...rest }) {
       <source
         media="(max-width: 48rem)"
         type="image/webp"
-        srcSet={`/src/assets/${pageName}/tablet/${imageName}.webp`}
+        srcSet={`/src/assets/${pageName}/${
+          noTabletSizes ? 'desktop' : 'tablet'
+        }/${imageName}.webp`}
       />
       <source
         media="(max-width: 90rem)"
@@ -41,7 +52,9 @@ function Image({ pageName, imageName, alt, pictureClassName, ...rest }) {
       <source
         media="(max-width: 48rem)"
         type="image/jpg"
-        srcSet={`/src/assets/${pageName}/tablet/${imageName}.jpg`}
+        srcSet={`/src/assets/${pageName}/${
+          noTabletSizes ? 'desktop' : 'tablet'
+        }/${imageName}.jpg`}
       />
       <source
         media="(max-width: 90rem)"
