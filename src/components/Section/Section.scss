@@ -1,9 +1,33 @@
-.hero {
+.section {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 610fr 830fr;
   grid-template-areas: 'content img';
-  background-color: var(--color-black);
-  height: var(--max-hero-height);
+  height: var(--max-section-height);
+
+  &--dark {
+    background-color: var(--color-black);
+  }
+
+  &--light {
+    background-color: var(--color-white);
+
+    & :is(h1, h2, p) {
+      color: var(--color-black);
+    }
+  }
+
+  &--reversed {
+    grid-template-columns: 830fr 610fr;
+    grid-template-areas: 'img content';
+
+    @media screen and (max-width: 90rem) {
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  @media screen and (max-width: 90rem) {
+    grid-template-columns: 1fr auto;
+  }
 
   @media screen and (max-width: 40.465rem) {
     height: revert;
@@ -19,36 +43,13 @@
     position: relative;
     width: 100%;
 
-    /* 33px @ 560px increasing to 54px @ 768px */
-    padding-inline-start: clamp(
-      33px,
-      calc(2.0625rem + ((1vw - 5.6px) * 10.0962)),
-      54px
-    );
-
-    /* 24px @ 560px increasing to 54px @ 768px */
-    padding-inline-end: clamp(
-      24px,
-      calc(1.5rem + ((1vw - 5.6px) * 14.4231)),
-      54px
-    );
+    padding-inline-start: 33px;
+    padding-inline-end: 24px;
 
     display: grid;
     grid-template-columns: 1fr auto 1fr;
 
-    &::after {
-      content: '';
-      width: 6px;
-      height: 100%;
-      background: linear-gradient(26.57deg, var(--main-accent));
-      position: absolute;
-
-      @media screen and (max-width: 40.465rem) {
-        display: none;
-      }
-    }
-
-    & h1 {
+    & :is(h1, h2) {
       max-width: 14ch;
       margin-block-end: 16px;
       text-transform: uppercase;
@@ -73,9 +74,12 @@
   }
 
   & picture {
-    width: clamp(273px, calc(17.0625rem + ((1vw - 7.68px) * 82.8869)), 830px);
-    max-height: var(--max-hero-height);
+    max-height: var(--max-section-height);
     grid-area: img;
+
+    @media screen and (max-width: 90rem) {
+      width: clamp(273px, calc(17.0625rem + ((1vw - 7.68px) * 82.8869)), 830px);
+    }
 
     @media screen and (max-width: 40.465rem) {
       width: 100%;
@@ -91,15 +95,14 @@
   }
 }
 
-.wrapper--decoration {
+.wrapper {
   grid-column: 2;
 
   @media screen and (max-width: 40.465rem) {
     padding-block: 72px;
     position: relative;
 
-    &::after {
-      content: '';
+    .decoration--top {
       height: 6px;
       width: 128px;
       position: absolute;
@@ -107,5 +110,16 @@
       left: 0;
       background: linear-gradient(26.57deg, var(--main-accent));
     }
+  }
+}
+
+.decoration {
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(26.57deg, var(--main-accent));
+  position: absolute;
+
+  @media screen and (max-width: 40.465rem) {
+    display: none;
   }
 }
