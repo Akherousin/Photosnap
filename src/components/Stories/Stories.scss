@@ -1,0 +1,37 @@
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  background-color: var(--color-white);
+
+  &__item {
+    list-style: none;
+
+    & > * {
+      transition: transform 200ms ease-in;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(26.56deg, var(--main-accent));
+        position: absolute;
+        bottom: 0;
+        transition: transform 200ms ease-in;
+
+        transform: translateY(6px);
+      }
+    }
+
+    &:hover > * {
+      transition: transform 100ms ease-out;
+      transform: translateY(-24px);
+
+      &::after {
+        transform: translateY(0);
+        transition: transform 100ms ease-out;
+      }
+    }
+  }
+}
