@@ -26,7 +26,7 @@ function Section({
     <section
       className={sectionClasses}
       style={{
-        '--max-section-height': isHero ? 'calc(650rem/16)' : 'calc(610rem/16)',
+        '--max-section-height': isHero ? 'calc(650rem/16)' : 'calc(600rem/16)',
       }}
     >
       <div className="section__content">
