@@ -1,6 +1,6 @@
 .stories {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
   background-color: var(--color-white);
 
   &__item {
@@ -21,6 +21,10 @@
         transition: transform 200ms ease-in;
 
         transform: translateY(6px);
+
+        @media screen and (max-width: 40.465rem) {
+          display: none;
+        }
       }
     }
 
@@ -31,6 +35,11 @@
       &::after {
         transform: translateY(0);
         transition: transform 100ms ease-out;
+      }
+
+      @media screen and (max-width: 40.465rem) {
+        transform: initial;
+        transition: initial;
       }
     }
   }
