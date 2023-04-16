@@ -7,7 +7,6 @@ function Section({
   image,
   button,
   variant = 'dark',
-  isHero,
   isReversed,
   hasDecoration,
   children,
@@ -23,20 +22,12 @@ function Section({
   });
 
   return (
-    <section
-      className={sectionClasses}
-      style={{
-        '--max-section-height': isHero ? 'calc(650rem/16)' : 'calc(600rem/16)',
-      }}
-    >
+    <section className={sectionClasses}>
       <div className="section__content">
-        {hasDecoration && <div className="decoration" aria-hidden={true} />}
-        <div className="wrapper">
+        <div className="decoration__wrapper">
+          {hasDecoration && <div className="decoration" aria-hidden={true} />}
           {children}
           {button}
-          {hasDecoration && (
-            <div className="decoration--top" aria-hidden={true} />
-          )}
         </div>
       </div>
       {image}
