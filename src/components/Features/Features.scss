@@ -1,0 +1,34 @@
+.features {
+  background-color: var(--color-white);
+  padding-block: 120px;
+  padding-inline: 33px 32px;
+
+  @media screen and (max-width: 40.465rem) {
+    padding-block: 80px;
+  }
+
+  ul {
+    max-width: calc(1110rem / 16);
+    margin-inline: auto;
+    display: grid;
+    align-items: baseline;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+    column-gap: 30px;
+    row-gap: 104px;
+    list-style: none;
+
+    @media screen and (max-width: 90rem) {
+      column-gap: 11px;
+      row-gap: 80px;
+    }
+
+    @media screen and (max-width: 40.465rem) {
+      row-gap: 56px;
+    }
+  }
+
+  li {
+    width: fit-content;
+  }
+}
