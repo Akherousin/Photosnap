@@ -20,9 +20,15 @@
 
   &--light {
     background-color: var(--color-white);
+    min-height: 600px;
 
     & :is(h1, h2, p) {
       color: var(--color-black);
+    }
+
+    .section__content {
+      padding-block: 0;
+      align-self: center;
     }
 
     @media screen and (max-width: 40.465rem) {
