@@ -1,0 +1,21 @@
+.article {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 350px;
+  align-items: center;
+
+  > svg {
+    margin-block-end: 48px;
+  }
+
+  > h3 {
+    margin-block-end: 16px;
+    text-transform: capitalize;
+  }
+
+  > p {
+    opacity: 0.6;
+    text-align: center;
+  }
+}
