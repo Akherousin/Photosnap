@@ -8,6 +8,12 @@
     grid-template-columns: 495fr 273fr;
   }
 
+  @media screen and (max-width: 40.465rem) {
+    height: revert;
+    grid-template-areas: 'img img' 'content content';
+    grid-template-rows: 294px auto;
+  }
+
   &--dark {
     background-color: var(--color-black);
   }
@@ -31,12 +37,9 @@
     @media screen and (max-width: 90rem) {
       grid-template-columns: 273fr 495fr;
     }
-  }
-
-  @media screen and (max-width: 40.465rem) {
-    height: revert;
-    grid-template-areas: 'img img' 'content content';
-    grid-template-rows: 294px auto;
+    @media screen and (max-width: 40.465rem) {
+      grid-template-areas: 'img img' 'content content';
+    }
   }
 
   &__content {
