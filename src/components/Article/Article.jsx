@@ -1,11 +1,11 @@
 import Button from '../Button';
-import './Article.scss';
+import styles from './Article.module.scss';
 
 function Article({ image, children }) {
   return (
-    <article className="article">
+    <article className={styles.article}>
       {image}
-      <div className="article__content">
+      <div className={styles.article__content}>
         {children}
         <Button variant="light" hasIcon>
           Read Story
