@@ -7,3 +7,7 @@ button,
 a {
   cursor: pointer;
 }
+
+::selection {
+  background: hsl(28, 100%, 79%);
+}
