@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import './Section.scss';
+import styles from './Section.module.scss';
 const possibleVariants = ['dark', 'light'];
 
 function Section({
@@ -10,6 +10,7 @@ function Section({
   isReversed,
   hasDecoration,
   children,
+  ...rest
 }) {
   if (typeof variant !== 'string' || !possibleVariants.includes(variant)) {
     throw new Error(
@@ -17,15 +18,21 @@ function Section({
     );
   }
 
-  const sectionClasses = classNames('section', `section--${variant}`, {
-    'section--reversed': isReversed,
-  });
+  const sectionClasses = classNames(
+    styles.section,
+    styles[`section--${variant}`],
+    {
+      [styles['section--reversed']]: isReversed,
+    }
+  );
 
   return (
-    <section className={sectionClasses}>
-      <div className="section__content">
-        <div className="decoration__wrapper">
-          {hasDecoration && <div className="decoration" aria-hidden={true} />}
+    <section className={sectionClasses} {...rest}>
+      <div className={styles.section__content}>
+        <div className={styles.decoration__wrapper}>
+          {hasDecoration && (
+            <div className={styles.decoration} aria-hidden={true} />
+          )}
           {children}
           {button}
         </div>

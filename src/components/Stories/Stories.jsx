@@ -1,13 +1,13 @@
-import './Stories.scss';
+import styles from './Stories.module.scss';
 import Article from '../Article';
 
 function Stories({ children }) {
   return (
-    <section>
+    <section aria-labelledby="our-stories">
       <h2 className="visually-hidden" id="our-stories">
         Our stories
       </h2>
-      <ul className="stories" aria-labelledby="our-stories">
+      <ul className={styles.stories} aria-labelledby="our-stories">
         {children}
       </ul>
     </section>
@@ -16,7 +16,7 @@ function Stories({ children }) {
 
 function StoriesArticle({ children, ...rest }) {
   return (
-    <li className="stories__item">
+    <li className={styles.stories__item}>
       <Article {...rest}>{children}</Article>
     </li>
   );

@@ -1,9 +1,9 @@
-import './Features.scss';
+import styles from './Features.module.scss';
 import Card from '../Card';
 
 function Features({ children }) {
   return (
-    <section className="features">
+    <section className={styles.features} aria-labelledby="our-features">
       <h2 className="visually-hidden" id="our-features">
         Our features
       </h2>
