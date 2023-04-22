@@ -4,15 +4,19 @@ import Article from '../Article';
 function Stories({ children }) {
   return (
     <section>
-      <h1 className="visually-hidden">Our stories</h1>
-      <ul className="stories">{children}</ul>
+      <h2 className="visually-hidden" id="our-stories">
+        Our stories
+      </h2>
+      <ul className="stories" aria-labelledby="our-stories">
+        {children}
+      </ul>
     </section>
   );
 }
 
 function StoriesArticle({ children, ...rest }) {
   return (
-    <li className='stories__item'>
+    <li className="stories__item">
       <Article {...rest}>{children}</Article>
     </li>
   );
