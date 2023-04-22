@@ -24,7 +24,12 @@ function Button({ variant = 'dark', hasIcon = false, children, ...rest }) {
         {children}
 
         {hasIcon ? (
-          <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="43"
+            height="14"
+            aria-hidden="true"
+          >
             <g fill="none" fillRule="evenodd">
               <path d="M0 7h41.864M35.428 1l6 6-6 6" />
             </g>
