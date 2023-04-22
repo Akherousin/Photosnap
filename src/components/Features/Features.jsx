@@ -4,8 +4,10 @@ import Card from '../Card';
 function Features({ children }) {
   return (
     <section className="features">
-      <h2 className="visually-hidden">Our features</h2>
-      <ul>{children}</ul>
+      <h2 className="visually-hidden" id="our-features">
+        Our features
+      </h2>
+      <ul aria-labelledby="our-features">{children}</ul>
     </section>
   );
 }
