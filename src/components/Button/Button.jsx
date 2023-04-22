@@ -3,7 +3,14 @@ import classNames from 'classnames';
 
 const possibleVariants = ['dark', 'light'];
 
-function Button({ variant = 'dark', hasIcon = false, children, ...rest }) {
+function Button({
+  variant = 'dark',
+  hasIcon = false,
+  children,
+  href,
+  className,
+  ...rest
+}) {
   if (typeof variant !== 'string' || !possibleVariants.includes(variant)) {
     throw new Error(
       'Invalid prop: variant must be a string of either "dark" or "light"'
@@ -14,16 +21,23 @@ function Button({ variant = 'dark', hasIcon = false, children, ...rest }) {
     throw new Error('Invalid prop: hasIcon must be a boolean');
   }
 
-  const classes = classNames(styles.button, styles[`button--${variant}`], {
-    [styles['button--icon']]: hasIcon,
-  });
+  const Tag = href ? 'a' : 'button';
+
+  const classes = classNames(
+    className,
+    styles.button,
+    styles[`button--${variant}`],
+    {
+      [styles['button--icon']]: hasIcon || href,
+    }
+  );
 
   return (
-    <button className={classes} {...rest}>
+    <Tag className={classes} href={href} {...rest}>
       <>
         {children}
 
-        {hasIcon ? (
+        {hasIcon || href ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="43"
@@ -36,7 +50,7 @@ function Button({ variant = 'dark', hasIcon = false, children, ...rest }) {
           </svg>
         ) : null}
       </>
-    </button>
+    </Tag>
   );
 }
 
