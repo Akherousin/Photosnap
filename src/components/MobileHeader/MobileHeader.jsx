@@ -2,7 +2,7 @@ import Logo from '../Logo/Logo';
 import close from '../../assets/shared/mobile/close.svg';
 import menu from '../../assets/shared/mobile/menu.svg';
 import styles from './MobileHeader.module.scss';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button';
 
@@ -10,6 +10,7 @@ function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef();
   const menuBtn = useRef();
+  const ctaBtn = useRef();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -22,6 +23,30 @@ function MobileHeader() {
       menuRef.current.focus();
     }
   };
+
+  // Add tab trapping inside the menu when it is open
+
+  useEffect(() => {
+    const tabTrap = (e) => {
+      if (e.key !== 'Tab' || e.keyCode !== 9) return;
+
+      if (e.shiftKey) {
+        if (document.activeElement === menuBtn.current) {
+          ctaBtn.current.focus();
+          e.preventDefault();
+        }
+      } else if (document.activeElement === ctaBtn.current) {
+        menuBtn.current.focus();
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener('keydown', tabTrap);
+
+    return () => {
+      window.removeEventListener('keydown', tabTrap);
+    };
+  }, []);
 
   return (
     <>
@@ -71,7 +96,7 @@ function MobileHeader() {
                   </li>
                 </ul>
               </nav>
-              <Button>Get an Invite</Button>
+              <Button ref={ctaBtn}>Get an Invite</Button>
             </div>
           </div>
         )}
