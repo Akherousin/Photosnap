@@ -17,7 +17,7 @@ function FeaturedStory() {
         <h2 className="heading-large">Hazy full moon of Appalachia</h2>
         <span>
           <time>March 2nd 2020</time>
-          <p className="story__author">by John Appleseed</p>
+          <p className={styles.story__author}>by John Appleseed</p>
         </span>
         <p className={`${styles.story__description} main-text`}>
           The dissected plateu area, while not actually made up of geological
