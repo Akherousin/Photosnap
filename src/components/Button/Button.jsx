@@ -1,16 +1,13 @@
 import styles from './Button.module.scss';
 import classNames from 'classnames';
+import { forwardRef } from 'react';
 
 const possibleVariants = ['dark', 'light'];
 
-function Button({
-  variant = 'dark',
-  hasIcon = false,
-  children,
-  href,
-  className,
-  ...rest
-}) {
+const Button = forwardRef(function Button(
+  { variant = 'dark', hasIcon = false, children, href, className, ...rest },
+  ref
+) {
   if (typeof variant !== 'string' || !possibleVariants.includes(variant)) {
     throw new Error(
       'Invalid prop: variant must be a string of either "dark" or "light"'
@@ -33,7 +30,7 @@ function Button({
   );
 
   return (
-    <Tag className={classes} href={href} {...rest}>
+    <Tag className={classes} href={href} {...rest} ref={ref}>
       <>
         {children}
 
@@ -52,6 +49,6 @@ function Button({
       </>
     </Tag>
   );
-}
+});
 
 export default Button;
