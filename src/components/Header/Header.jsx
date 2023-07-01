@@ -5,14 +5,10 @@ import styles from './Header.module.scss';
 
 function Header() {
   return (
-    <header role="banner" aria-label="Site header" className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.container}>
         <Logo />
-        <nav
-          role="navigation"
-          aria-label="Main navigation"
-          className={styles.nav}
-        >
+        <nav aria-label="Site" className={styles.nav}>
           <ul className={styles.nav__list}>
             <li>
               <Link to="/stories" className={styles.nav__link}>

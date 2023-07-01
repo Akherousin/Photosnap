@@ -77,7 +77,7 @@ function MobileHeader() {
           >
             <div className={styles.menu__content}>
               <h2 className="visually-hidden">Main menu</h2>
-              <nav className={styles.nav}>
+              <nav className={styles.nav} aria-label="Site">
                 <ul className={styles.nav__list}>
                   <li>
                     <Link to="/stories" className={styles.nav__link}>
