@@ -11,6 +11,7 @@ function MobileHeader() {
   const menuRef = useRef();
   const menuBtn = useRef();
   const ctaBtn = useRef();
+  const headerRef = useRef();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -48,12 +49,28 @@ function MobileHeader() {
     };
   }, []);
 
+  // Close menu on pressing Escape key
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        console.log(e.key);
+        menuBtn.current.focus();
+        setIsMenuOpen(false);
+      }
+    };
+
+    headerRef.current.addEventListener('keydown', handleKeyDown);
+
+    return headerRef.current.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
     <>
       {isMenuOpen && (
         <div className={styles.overlay} onClick={toggleMenu}></div>
       )}
-      <header className={styles.header}>
+      <header className={styles.header} ref={headerRef}>
         <Logo />
         <button
           ref={menuBtn}
@@ -62,21 +79,14 @@ function MobileHeader() {
           aria-expanded={isMenuOpen}
         >
           <span className="visually-hidden">
-            {isMenuOpen ? 'Close menu' : 'Open menu'}
+            {isMenuOpen ? 'Close Navigation' : 'Open Navigation'}
           </span>
           <img alt="" src={isMenuOpen ? close : menu} aria-hidden="true" />
         </button>
 
         {isMenuOpen && (
-          <div
-            className={styles.menu}
-            aria-labelledby="menu-button"
-            role="dialog"
-            tabIndex="-1"
-            ref={menuRef}
-          >
+          <div className={styles.menu} ref={menuRef}>
             <div className={styles.menu__content}>
-              <h2 className="visually-hidden">Main menu</h2>
               <nav className={styles.nav} aria-label="Site">
                 <ul className={styles.nav__list}>
                   <li>
