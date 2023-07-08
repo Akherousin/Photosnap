@@ -1,4 +1,4 @@
-import Button from '../Button';
+import StyledLink from '../StyledLink';
 import Image from '../Image';
 import styles from './FeaturedStory.module.scss';
 
@@ -25,9 +25,10 @@ function FeaturedStory() {
           eastern Kentucky and West Virginia, and while the ridges are not high,
           the terrain is extremely rugged.
         </p>
-        <Button variant="light" href="#">
-          Read the story
-        </Button>
+        <StyledLink variant="light" href="#">
+          Read the story{' '}
+          <span className="visually-hidden">Hazy full moon of Appalachia.</span>
+        </StyledLink>
       </div>
     </section>
   );
