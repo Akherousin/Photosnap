@@ -14,7 +14,6 @@ function HomePage() {
 
       <Section
         hasDecoration
-        aria-labelledby="hero-heading"
         image={
           <Image
             pageName="home"
@@ -22,11 +21,13 @@ function HomePage() {
             alt="A photographer standing on a bridge looking at a lake with mountains in the background"
           />
         }
-        link={<StyledLink variant="light">Get an invite</StyledLink>}
+        link={
+          <StyledLink variant="light" href="#">
+            Get an invite
+          </StyledLink>
+        }
       >
-        <h1 className="heading-large" id="hero-heading">
-          Create and share your photo stories.
-        </h1>
+        <h1 className="heading-large">Create and share your photo stories.</h1>
         <p className="main-text">
           Photosnap is a platform for photographers and visual storytellers. We
           make it easy to share photos, tell stories and connect with others.
@@ -36,7 +37,6 @@ function HomePage() {
       <Section
         variant="light"
         isReversed
-        aria-labelledby="heading-beautiful"
         image={
           <Image
             pageName="home"
@@ -44,11 +44,13 @@ function HomePage() {
             alt="A photographer standing on a bridge looking at a lake with mountains in the background"
           />
         }
-        link={<StyledLink variant="dark">View the stories</StyledLink>}
+        link={
+          <StyledLink variant="dark" href="#">
+            View the stories
+          </StyledLink>
+        }
       >
-        <h2 className="heading-large" id="heading-beautiful">
-          Beautiful stories every&nbsp;time
-        </h2>
+        <h2 className="heading-large">Beautiful stories every&nbsp;time</h2>
         <p className="main-text">
           We provide design templates to ensure your stories look terrific.
           Easily add photos, text, embed maps and media from other networks.
@@ -58,7 +60,6 @@ function HomePage() {
 
       <Section
         variant="light"
-        aria-labelledby="heading-designed"
         image={
           <Image
             pageName="home"
@@ -66,11 +67,13 @@ function HomePage() {
             alt="A photographer standing on a bridge looking at a lake with mountains in the background"
           />
         }
-        link={<StyledLink variant="dark">View the stories</StyledLink>}
+        link={
+          <StyledLink variant="dark" href="#">
+            View the stories
+          </StyledLink>
+        }
       >
-        <h2 className="heading-large" id="heading-designed">
-          Designed for everyone
-        </h2>
+        <h2 className="heading-large">Designed for everyone</h2>
         <p className="main-text">
           Photosnap can help you create stories that resonate with your
           audience. Our tool is desigbed for photographers of all levels,
@@ -83,7 +86,11 @@ function HomePage() {
           image={
             <Image pageName="stories" imageName="mountains" noTabletSizes />
           }
-          link={<StyledLink variant="light">Read More</StyledLink>}
+          link={
+            <StyledLink variant="light" href="#">
+              Read More
+            </StyledLink>
+          }
         >
           <time>April 16th 2020</time>
           <h2>The Mountains</h2>
@@ -93,7 +100,11 @@ function HomePage() {
           image={
             <Image pageName="stories" imageName="cityscapes" noTabletSizes />
           }
-          link={<StyledLink variant="light">Read More</StyledLink>}
+          link={
+            <StyledLink variant="light" href="#">
+              Read More
+            </StyledLink>
+          }
         >
           <time>April 14th 2020</time>
           <h2>Sunset Cityscapes</h2>
@@ -107,7 +118,11 @@ function HomePage() {
               noTabletSizes
             />
           }
-          link={<StyledLink variant="light">Read More</StyledLink>}
+          link={
+            <StyledLink variant="light" href="#">
+              Read More
+            </StyledLink>
+          }
         >
           <time>April 11th 2020</time>
           <h2>18 Days Voyage</h2>
@@ -121,7 +136,11 @@ function HomePage() {
               noTabletSizes
             />
           }
-          link={<StyledLink variant="light">Read More</StyledLink>}
+          link={
+            <StyledLink variant="light" href="#">
+              Read More
+            </StyledLink>
+          }
         >
           <time>April 9th 2020</time>
           <h2>Architecturals</h2>

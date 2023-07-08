@@ -3,7 +3,7 @@ import Card from '../Card';
 
 function Features({ children }) {
   return (
-    <section className={styles.features} aria-labelledby="our-features">
+    <section className={styles.features}>
       <h2 className="visually-hidden" id="our-features">
         Our features
       </h2>

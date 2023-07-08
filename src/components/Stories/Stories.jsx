@@ -3,7 +3,7 @@ import Article from '../Article';
 
 function Stories({ children }) {
   return (
-    <section aria-labelledby="our-stories">
+    <section>
       <h2 className="visually-hidden" id="our-stories">
         Our stories
       </h2>
