@@ -93,7 +93,7 @@ function HomePage() {
           }
         >
           <time>April 16th 2020</time>
-          <h2>The Mountains</h2>
+          <h3>The Mountains</h3>
           <p>by John Appleseed</p>
         </Stories.Article>
         <Stories.Article
@@ -107,7 +107,7 @@ function HomePage() {
           }
         >
           <time>April 14th 2020</time>
-          <h2>Sunset Cityscapes</h2>
+          <h3>Sunset Cityscapes</h3>
           <p>by Benjamin Cruz</p>
         </Stories.Article>
         <Stories.Article
@@ -125,7 +125,7 @@ function HomePage() {
           }
         >
           <time>April 11th 2020</time>
-          <h2>18 Days Voyage</h2>
+          <h3>18 Days Voyage</h3>
           <p>by Alexei Borodin</p>
         </Stories.Article>
         <Stories.Article
@@ -143,7 +143,7 @@ function HomePage() {
           }
         >
           <time>April 9th 2020</time>
-          <h2>Architecturals</h2>
+          <h3>Architecturals</h3>
           <p>by Samantha Brooke</p>
         </Stories.Article>
       </Stories>
