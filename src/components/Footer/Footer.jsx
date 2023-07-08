@@ -164,9 +164,9 @@ function Footer() {
           Get an invite
         </StyledLink>
 
-        <p className={styles.footer__copyright}>
+        <small className={styles.footer__copyright}>
           Copyright 2023. All Rights Reserved
-        </p>
+        </small>
       </div>
     </footer>
   );
