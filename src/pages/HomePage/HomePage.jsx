@@ -5,8 +5,40 @@ import Image from '../../components/Image';
 import Features from '../../components/Features';
 
 import StyledLink from '../../components/StyledLink';
+import { useEffect } from 'react';
+
+const storiesList = [
+  {
+    title: 'The Mountains',
+    author: 'John Appleseed',
+    date: 'April 16th 2020',
+    image: 'mountains',
+  },
+  {
+    title: 'Sunset Cityscapes',
+    author: 'Benjamin Cruz',
+    date: 'April 14th 2020',
+    image: 'cityscapes',
+  },
+  {
+    title: '18 Days Voyage',
+    author: 'Alexei Borodin',
+    date: 'April 11th 2020',
+    image: '18-days-voyage',
+  },
+  {
+    title: 'Architecturals',
+    author: 'Samantha Brooke',
+    date: 'April 9th 2020',
+    image: 'architecturals',
+  },
+];
 
 function HomePage() {
+  useEffect(() => {
+    document.title = 'Homepage - Photosnap';
+  });
+
   return (
     <>
       <Section
@@ -79,70 +111,22 @@ function HomePage() {
       </Section>
 
       <Stories>
-        <Stories.Article
-          image={
-            <Image pageName="stories" imageName="mountains" noTabletSizes />
-          }
-          link={
-            <StyledLink variant="light" href="#">
-              Read More
-            </StyledLink>
-          }
-        >
-          <time>April 16th 2020</time>
-          <h3>The Mountains</h3>
-          <p>by John Appleseed</p>
-        </Stories.Article>
-        <Stories.Article
-          image={
-            <Image pageName="stories" imageName="cityscapes" noTabletSizes />
-          }
-          link={
-            <StyledLink variant="light" href="#">
-              Read More
-            </StyledLink>
-          }
-        >
-          <time>April 14th 2020</time>
-          <h3>Sunset Cityscapes</h3>
-          <p>by Benjamin Cruz</p>
-        </Stories.Article>
-        <Stories.Article
-          image={
-            <Image
-              pageName="stories"
-              imageName="18-days-voyage"
-              noTabletSizes
-            />
-          }
-          link={
-            <StyledLink variant="light" href="#">
-              Read More
-            </StyledLink>
-          }
-        >
-          <time>April 11th 2020</time>
-          <h3>18 Days Voyage</h3>
-          <p>by Alexei Borodin</p>
-        </Stories.Article>
-        <Stories.Article
-          image={
-            <Image
-              pageName="stories"
-              imageName="architecturals"
-              noTabletSizes
-            />
-          }
-          link={
-            <StyledLink variant="light" href="#">
-              Read More
-            </StyledLink>
-          }
-        >
-          <time>April 9th 2020</time>
-          <h3>Architecturals</h3>
-          <p>by Samantha Brooke</p>
-        </Stories.Article>
+        {storiesList.map(({ title, image, author, date }) => (
+          <Stories.Article
+            key={title}
+            image={<Image pageName="stories" imageName={image} noTabletSizes />}
+            link={
+              <StyledLink variant="light" href="#">
+                Read More{' '}
+                <span className="visually-hidden">about {title}.</span>
+              </StyledLink>
+            }
+          >
+            <time>{date}</time>
+            <h3>{title}</h3>
+            <p>by {author}</p>
+          </Stories.Article>
+        ))}
       </Stories>
 
       <Features>
