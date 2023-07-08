@@ -1,17 +1,14 @@
-import SuperHeader from '../../components/SuperHeader';
 import Section from '../../components/Section';
 
 import Stories from '../../components/Stories';
 import Image from '../../components/Image';
 import Features from '../../components/Features';
-import Footer from '../../components/Footer';
+
 import StyledLink from '../../components/StyledLink';
 
 function HomePage() {
   return (
     <>
-      <SuperHeader />
-
       <Section
         hasDecoration
         image={
@@ -196,8 +193,6 @@ function HomePage() {
           </p>
         </Features.Card>
       </Features>
-
-      <Footer />
     </>
   );
 }

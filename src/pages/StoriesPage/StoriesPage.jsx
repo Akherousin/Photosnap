@@ -1,13 +1,10 @@
-import SuperHeader from '../../components/SuperHeader';
 import FeaturedStory from '../../components/FeaturedStory';
 import Stories from '../../components/Stories';
 import Image from '../../components/Image';
-import Footer from '../../components/Footer';
 
 function StoriesPage() {
   return (
     <>
-      <SuperHeader />
       <FeaturedStory />
 
       <Stories>
@@ -56,7 +53,6 @@ function StoriesPage() {
           <p>by Samantha Brooke</p>
         </Stories.Article>
       </Stories>
-      <Footer />
     </>
   );
 }
