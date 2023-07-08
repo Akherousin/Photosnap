@@ -37,30 +37,4 @@
       background-color: var(--color-grey);
     }
   }
-
-  &--icon {
-    background: none;
-    padding: 0;
-    display: inline-flex;
-    gap: 16px;
-    min-height: 0;
-
-    &:hover {
-      background: none;
-      text-decoration: underline;
-    }
-
-    & > svg {
-      display: block;
-      stroke: currentColor;
-    }
-
-    &.button--dark {
-      color: var(--color-black);
-    }
-
-    &.button--light {
-      color: var(--color-white);
-    }
-  }
 }

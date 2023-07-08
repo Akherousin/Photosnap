@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 const possibleVariants = ['dark', 'light'];
 
 const Button = forwardRef(function Button(
-  { variant = 'dark', hasIcon = false, children, href, className, ...rest },
+  { variant = 'dark', children, href, className, ...rest },
   ref
 ) {
   if (typeof variant !== 'string' || !possibleVariants.includes(variant)) {
@@ -14,40 +14,16 @@ const Button = forwardRef(function Button(
     );
   }
 
-  if (typeof hasIcon !== 'boolean') {
-    throw new Error('Invalid prop: hasIcon must be a boolean');
-  }
-
-  const Tag = href ? 'a' : 'button';
-
   const classes = classNames(
     className,
     styles.button,
-    styles[`button--${variant}`],
-    {
-      [styles['button--icon']]: hasIcon || href,
-    }
+    styles[`button--${variant}`]
   );
 
   return (
-    <Tag className={classes} href={href} {...rest} ref={ref}>
-      <>
-        {children}
-
-        {hasIcon || href ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="43"
-            height="14"
-            aria-hidden="true"
-          >
-            <g fill="none" fillRule="evenodd">
-              <path d="M0 7h41.864M35.428 1l6 6-6 6" />
-            </g>
-          </svg>
-        ) : null}
-      </>
-    </Tag>
+    <button className={classes} href={href} {...rest} ref={ref}>
+      {children}
+    </button>
   );
 });
 

@@ -1,0 +1,35 @@
+.link {
+  font-size: var(--font-size-heading-xs);
+  line-height: 15.62px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-md);
+  background: none;
+  display: inline-flex;
+  gap: 16px;
+  min-height: 0;
+
+  & > svg {
+    display: block;
+    stroke: currentColor;
+  }
+
+  &--dark {
+    color: var(--color-black);
+  }
+
+  &--light {
+    color: var(--color-white);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 150ms ease-in;
+
+    &:hover {
+      background: none;
+      text-decoration: underline;
+      transition: all 50ms ease-out;
+    }
+  }
+}

@@ -5,7 +5,7 @@ const possibleVariants = ['dark', 'light'];
 
 function Section({
   image,
-  button,
+  link,
   variant = 'dark',
   isReversed,
   hasDecoration,
@@ -34,7 +34,7 @@ function Section({
             <div className={styles.decoration} aria-hidden={true} />
           )}
           {children}
-          {button}
+          {link}
         </div>
       </div>
       {image}

@@ -1,15 +1,12 @@
-import Button from '../Button';
 import styles from './Article.module.scss';
 
-function Article({ image, children }) {
+function Article({ image, children, link }) {
   return (
     <article className={styles.article}>
       {image}
       <div className={styles.article__content}>
         {children}
-        <Button variant="light" hasIcon>
-          Read Story
-        </Button>
+        {link}
       </div>
     </article>
   );

@@ -1,4 +1,4 @@
-import Button from '../Button/Button';
+import StyledLink from '../StyledLink';
 import Logo from '../Logo';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.scss';
@@ -160,9 +160,9 @@ function Footer() {
           </li>
         </ul>
 
-        <Button href="#" variant="light" className={styles.footer__cta}>
+        <StyledLink href="#" variant="light" className={styles.footer__cta}>
           Get an invite
-        </Button>
+        </StyledLink>
 
         <p className={styles.footer__copyright}>
           Copyright 2023. All Rights Reserved
