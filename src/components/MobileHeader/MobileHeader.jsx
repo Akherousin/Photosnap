@@ -54,7 +54,6 @@ function MobileHeader() {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
-        console.log(e.key);
         menuBtn.current.focus();
         setIsMenuOpen(false);
       }
@@ -62,7 +61,9 @@ function MobileHeader() {
 
     headerRef.current.addEventListener('keydown', handleKeyDown);
 
-    return headerRef.current.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      headerRef.current.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   return (
