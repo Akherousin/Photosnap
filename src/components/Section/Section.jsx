@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-
 import styles from './Section.module.scss';
+
 const possibleVariants = ['dark', 'light'];
 
 function Section({
@@ -30,9 +30,7 @@ function Section({
     <section className={sectionClasses} {...rest}>
       <div className={styles.section__content}>
         <div className={styles.decoration__wrapper}>
-          {hasDecoration && (
-            <div className={styles.decoration} aria-hidden={true} />
-          )}
+          {hasDecoration && <div className={styles.decoration} />}
           {children}
           {link}
         </div>

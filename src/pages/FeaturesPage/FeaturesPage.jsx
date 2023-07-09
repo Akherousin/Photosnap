@@ -2,8 +2,14 @@ import Section from '../../components/Section';
 import Image from '../../components/Image';
 import Features from '../../components/Features/Features';
 import { featuresList } from '../../DATA';
+import { useEffect } from 'react';
+import Advertisement from '../../components/Advertisement';
 
 function FeaturesPage() {
+  useEffect(() => {
+    document.title = 'Features - Photosnap';
+  }, []);
+
   return (
     <>
       <Section
@@ -25,6 +31,7 @@ function FeaturesPage() {
           </Features.Card>
         ))}
       </Features>
+      <Advertisement />
     </>
   );
 }
