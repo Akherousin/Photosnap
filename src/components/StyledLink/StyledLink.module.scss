@@ -23,12 +23,15 @@
     color: var(--color-white);
   }
 
+  &:hover {
+    background: none;
+    text-decoration: underline;
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     transition: all 150ms ease-in;
 
     &:hover {
-      background: none;
-      text-decoration: underline;
       transition: all 50ms ease-out;
     }
   }

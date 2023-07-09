@@ -28,18 +28,20 @@
       }
     }
 
-    &:hover > * {
-      transition: transform 100ms ease-out;
-      transform: translateY(-24px);
-
-      &::after {
-        transform: translateY(0);
+    @media (prefers-reduced-motion: no-preference) {
+      &:hover > * {
         transition: transform 100ms ease-out;
-      }
+        transform: translateY(-24px);
 
-      @media screen and (max-width: 40.465rem) {
-        transform: initial;
-        transition: initial;
+        &::after {
+          transform: translateY(0);
+          transition: transform 100ms ease-out;
+        }
+
+        @media screen and (max-width: 40.465rem) {
+          transform: initial;
+          transition: initial;
+        }
       }
     }
   }
