@@ -136,3 +136,33 @@ export const featuresList = [
     icon: dragDropSvg,
   },
 ];
+
+export const pricingPlans = [
+  {
+    title: 'Basic',
+    desc: 'Includes basic usage of our platform. Recommended for new and aspiring photographers.',
+    recommended: false,
+    price: {
+      mounthly: '19.00',
+      yearly: '190.00',
+    },
+  },
+  {
+    title: 'Pro',
+    desc: 'More advanced features available. Recommended for photography veterans and professionals.',
+    recommended: true,
+    price: {
+      mounthly: '39.00',
+      yearly: '390.00',
+    },
+  },
+  {
+    title: 'Business',
+    desc: 'Additional features available such as more detailed metrics. Recommended for business owners.',
+    recommended: false,
+    price: {
+      mounthly: '99.00',
+      yearly: '990.00',
+    },
+  },
+];

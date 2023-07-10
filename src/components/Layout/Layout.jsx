@@ -6,7 +6,9 @@ function Layout() {
   return (
     <>
       <SuperHeader />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
   );

@@ -1,0 +1,80 @@
+.card {
+  display: grid;
+  gap: 40px;
+  min-width: calc(350rem / 16);
+  max-width: fit-content;
+  background-color: hsl(0%, 0%, 96%);
+  padding-inline: 40px;
+  padding-block: 56px 40px;
+
+  @media screen and (min-width: 32.5rem) and (max-width: 69.375rem) {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    max-width: revert;
+    align-items: start;
+  }
+
+  h2 {
+    text-align: center;
+    margin-block-end: 18px;
+    text-transform: capitalize;
+
+    @media screen and (min-width: 32.5rem) and (max-width: 69.375rem) {
+      text-align: start;
+    }
+  }
+
+  header > p {
+    max-width: calc(270rem / 16);
+    text-align: center;
+
+    @media screen and (min-width: 32.5rem) and (max-width: 69.375rem) {
+      text-align: start;
+    }
+  }
+
+  p:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 32.5rem) and (max-width: 69.375rem) {
+      justify-self: end;
+    }
+  }
+
+  header > p,
+  p > span:last-of-type {
+    opacity: 0.6;
+  }
+
+  button {
+    align-self: stretch;
+
+    @media screen and (min-width: 32.5rem) and (max-width: 69.375rem) {
+      align-self: start;
+    }
+  }
+}
+
+.recommended {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding-block-start: 88px;
+  padding-block-end: 71px;
+  position: relative;
+
+  @media screen and (min-width: 32.5rem) and (max-width: 69.375rem) {
+    padding: 40px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(27deg, var(--main-accent));
+  }
+}

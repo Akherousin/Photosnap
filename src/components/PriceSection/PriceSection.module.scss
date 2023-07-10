@@ -1,0 +1,39 @@
+.section {
+  padding-block: 120px 160px;
+  padding-inline: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 69.375rem) {
+    padding-block: 112px;
+  }
+
+  @media screen and (max-width: 32.5rem) {
+    padding-inline: 29px 28px;
+    padding-block: 64px;
+  }
+
+  fieldset {
+    margin-block-end: 48px;
+  }
+
+  & > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 69.375rem) {
+      gap: 24px;
+    }
+
+    @media screen and (min-width: 32.5rem) and (max-width: 69.375rem) {
+      flex-direction: column;
+      align-self: stretch;
+      align-items: stretch;
+    }
+  }
+}

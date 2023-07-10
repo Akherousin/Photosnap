@@ -15,7 +15,6 @@ function StoriesPage() {
       <FeaturedStory />
 
       <Stories>
-        {' '}
         {storiesList.map(({ title, image, author, date }) => (
           <Stories.Article
             key={title}
