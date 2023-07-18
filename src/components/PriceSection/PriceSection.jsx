@@ -17,7 +17,7 @@ function PriceSection() {
       />
       <ul role="list">
         {pricingPlans.map(({ title, desc, price, recommended }) => (
-          <li key="title">
+          <li key={title}>
             <PriceCard
               title={title}
               desc={desc}
