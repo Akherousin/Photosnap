@@ -77,7 +77,6 @@ function Image({
       <img
         src={`/src/assets/${pageName}/desktop/${imageName}.jpg`}
         alt={alt}
-        loading="lazy"
         {...rest}
       />
     </picture>
