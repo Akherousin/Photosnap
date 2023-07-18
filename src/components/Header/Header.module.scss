@@ -1,4 +1,4 @@
-@import '../../mixins.scss';
+@use '../../mixins' as mixin;
 
 .header {
   padding-block: 16px;
@@ -37,7 +37,7 @@
   }
 
   &__link {
-    @include heading-xsmall;
+    @include mixin.heading-xsmall;
 
     text-decoration: none;
     color: inherit;

@@ -1,7 +1,13 @@
+// const QUERIES = {
+//   MOBILEANDDOWN: '(max-width: 40.465rem)',
+//   TABLETANDUP: '(max-width: 89.9999rem)',
+//   DESKTOPANDUP: '(min-width: 90rem)',
+// };
+
 const QUERIES = {
-  MOBILEANDDOWN: '(max-width: 40.465rem)',
-  TABLETANDUP: '(max-width: 89.9999rem)',
-  DESKTOPANDUP: '(min-width: 90rem)',
+  MOBILEANDDOWN: '(max-width: 23.4375rem)',
+  TABLETANDUP: '(max-width: 47.9999rem)',
+  DESKTOPANDUP: '(min-width: 48rem)',
 };
 
 function Image({

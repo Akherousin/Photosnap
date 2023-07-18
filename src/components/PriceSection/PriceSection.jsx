@@ -1,5 +1,6 @@
 import Toggle from '../Toggle';
 import PriceCard from '../PriceCard';
+import Table from '../Table';
 import styles from './PriceSection.module.scss';
 import { useState } from 'react';
 import { pricingPlans } from '../../DATA';
@@ -26,6 +27,7 @@ function PriceSection() {
           </li>
         ))}
       </ul>
+      <Table />
     </section>
   );
 }

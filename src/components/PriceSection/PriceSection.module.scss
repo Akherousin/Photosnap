@@ -25,12 +25,13 @@
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin-block-end: 140px;
 
     @media screen and (max-width: 69.375rem) {
       gap: 24px;
     }
 
-    @media screen and (min-width: 32.5rem) and (max-width: 69.375rem) {
+    @media screen and (min-width: 32.5rem) and (max-width: 74.375rem) {
       flex-direction: column;
       align-self: stretch;
       align-items: stretch;

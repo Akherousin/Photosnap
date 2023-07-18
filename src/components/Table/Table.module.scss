@@ -1,0 +1,44 @@
+@use '../../mixins' as mixin;
+
+.table {
+  @include mixin.heading-xsmall;
+
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-transform: uppercase;
+
+  caption {
+    margin-block-end: 56px;
+  }
+
+  tr {
+    border-block-end: 1px solid var(--color-grey);
+  }
+
+  thead {
+    tr {
+      border-color: var(--color-black);
+    }
+
+    th {
+      padding-block-end: 24px;
+    }
+  }
+
+  tr > th:first-of-type {
+    text-align: start;
+  }
+
+  tr > *:not(:first-child) {
+    min-width: calc(140rem / 16);
+    text-align: center;
+  }
+
+  td {
+    padding-block: 23.5px;
+  }
+
+  svg {
+    margin-inline: auto;
+  }
+}
