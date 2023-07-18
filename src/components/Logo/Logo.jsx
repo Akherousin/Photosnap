@@ -5,9 +5,15 @@ function Logo({ variant = 'dark' }) {
   const gradientId = React.useId();
 
   return (
-    <Link to="/" aria-labelledby="logo__title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="170" height="16">
-        <title id="logo__title">Photosnap - Home</title>
+    <Link to="/">
+      <span className="visually-hidden">Photosnap - Home</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="170"
+        height="16"
+        aria-hidden="true"
+        focusable="false"
+      >
         <defs>
           <linearGradient
             id={gradientId}
