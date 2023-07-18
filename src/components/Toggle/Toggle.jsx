@@ -42,16 +42,7 @@ function Toggle({ firstValue, secondValue, onChange }) {
           checked={currentValue === secondValue}
           onChange={handleChange}
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="64"
-          height="32"
-          viewBox="0 0 64 32"
-          fill="none"
-        >
-          <rect width="64" height="32" rx="16" fill="#DFDFDF" />
-          <circle cx="16" cy="16" r="12" fill="black" />
-        </svg>
+        <ToggleSVG aria-hidden="true" focusable="false" />
       </span>
       <label
         htmlFor="toggle-input-2"
@@ -60,6 +51,22 @@ function Toggle({ firstValue, secondValue, onChange }) {
         {secondValue}
       </label>
     </fieldset>
+  );
+}
+
+function ToggleSVG({ ...rest }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="32"
+      viewBox="0 0 64 32"
+      fill="none"
+      {...rest}
+    >
+      <rect width="64" height="32" rx="16" fill="#DFDFDF" />
+      <circle cx="16" cy="16" r="12" fill="black" />
+    </svg>
   );
 }
 

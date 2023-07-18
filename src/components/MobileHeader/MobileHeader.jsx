@@ -1,6 +1,5 @@
 import Logo from '../Logo/Logo';
-import close from '../../assets/shared/mobile/close.svg';
-import menu from '../../assets/shared/mobile/menu.svg';
+
 import styles from './MobileHeader.module.scss';
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -82,7 +81,12 @@ function MobileHeader() {
           <span className="visually-hidden">
             {isMenuOpen ? 'Close Navigation' : 'Open Navigation'}
           </span>
-          <img alt="" src={isMenuOpen ? close : menu} aria-hidden="true" />
+
+          {isMenuOpen ? (
+            <CloseSVG aria-hidden="true" focusable="false" />
+          ) : (
+            <MenuSVG aria-hidden="true" focusable="false" />
+          )}
         </button>
 
         {isMenuOpen && (
@@ -134,4 +138,24 @@ function MobileHeader() {
   );
 }
 
+function CloseSVG({ ...rest }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" {...rest}>
+      <path
+        fillRule="evenodd"
+        d="M14.718.075l.707.707L8.707 7.5l6.718 6.718-.707.707L8 8.207l-6.718 6.718-.707-.707L7.293 7.5.575.782l.707-.707L8 6.793 14.718.075z"
+      />
+    </svg>
+  );
+}
+
+function MenuSVG({ ...rest }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="6" {...rest}>
+      <g fillRule="evenodd">
+        <path d="M0 0h20v1H0zM0 5h20v1H0z" />
+      </g>
+    </svg>
+  );
+}
 export default MobileHeader;

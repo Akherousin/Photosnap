@@ -23,59 +23,59 @@ function Image({
       <source
         media={QUERIES.MOBILEANDDOWN}
         type="image/avif"
-        srcSet={`/src/assets/${pageName}/mobile/${imageName}.avif`}
+        srcSet={`/assets/${pageName}/mobile/${imageName}.avif`}
       />
       <source
         media={QUERIES.TABLETANDUP}
         type="image/avif"
-        srcSet={`/src/assets/${pageName}/${
+        srcSet={`/assets/${pageName}/${
           noTabletSizes ? 'desktop' : 'tablet'
         }/${imageName}.avif`}
       />
       <source
         media={QUERIES.DESKTOPANDUP}
         type="image/avif"
-        srcSet={`/src/assets/${pageName}/desktop/${imageName}.avif`}
+        srcSet={`/assets/${pageName}/desktop/${imageName}.avif`}
       />
 
       <source
         media={QUERIES.MOBILEANDDOWN}
         type="image/webp"
-        srcSet={`/src/assets/${pageName}/mobile/${imageName}.webp`}
+        srcSet={`/assets/${pageName}/mobile/${imageName}.webp`}
       />
       <source
         media={QUERIES.TABLETANDUP}
         type="image/webp"
-        srcSet={`/src/assets/${pageName}/${
+        srcSet={`/assets/${pageName}/${
           noTabletSizes ? 'desktop' : 'tablet'
         }/${imageName}.webp`}
       />
       <source
         media={QUERIES.DESKTOPANDUP}
         type="image/webp"
-        srcSet={`/src/assets/${pageName}/desktop/${imageName}.webp`}
+        srcSet={`/assets/${pageName}/desktop/${imageName}.webp`}
       />
 
       <source
         media={QUERIES.MOBILEANDDOWN}
         type="image/jpg"
-        srcSet={`/src/assets/${pageName}/mobile/${imageName}.jpg`}
+        srcSet={`/assets/${pageName}/mobile/${imageName}.jpg`}
       />
       <source
         media={QUERIES.TABLETANDUP}
         type="image/jpg"
-        srcSet={`/src/assets/${pageName}/${
+        srcSet={`/assets/${pageName}/${
           noTabletSizes ? 'desktop' : 'tablet'
         }/${imageName}.jpg`}
       />
       <source
         media={QUERIES.DESKTOPANDUP}
         type="image/jpg"
-        srcSet={`/src/assets/${pageName}/desktop/${imageName}.jpg`}
+        srcSet={`/assets/${pageName}/desktop/${imageName}.jpg`}
       />
 
       <img
-        src={`/src/assets/${pageName}/desktop/${imageName}.jpg`}
+        src={`/assets/${pageName}/desktop/${imageName}.jpg`}
         alt={alt}
         {...rest}
       />
