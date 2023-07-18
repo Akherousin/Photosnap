@@ -5,7 +5,7 @@
 // };
 
 const QUERIES = {
-  MOBILEANDDOWN: '(max-width: 23.4375rem)',
+  MOBILEANDDOWN: '(max-width: 28.75rem)',
   TABLETANDUP: '(max-width: 47.9999rem)',
   DESKTOPANDUP: '(min-width: 48rem)',
 };
