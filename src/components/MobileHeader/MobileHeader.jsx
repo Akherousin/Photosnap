@@ -91,17 +91,35 @@ function MobileHeader() {
               <nav className={styles.nav} aria-label="Site">
                 <ul className={styles.nav__list}>
                   <li>
-                    <Link to="/stories" className={styles.nav__link}>
+                    <Link
+                      to="/stories"
+                      className={styles.nav__link}
+                      onClick={() => {
+                        setIsMenuOpen(!isMenuOpen);
+                      }}
+                    >
                       Stories
                     </Link>
                   </li>
                   <li>
-                    <Link to="/features" className={styles.nav__link}>
+                    <Link
+                      to="/features"
+                      className={styles.nav__link}
+                      onClick={() => {
+                        setIsMenuOpen(!isMenuOpen);
+                      }}
+                    >
                       Features
                     </Link>
                   </li>
                   <li>
-                    <Link to="/pricing" className={styles.nav__link}>
+                    <Link
+                      to="/pricing"
+                      className={styles.nav__link}
+                      onClick={() => {
+                        setIsMenuOpen(!isMenuOpen);
+                      }}
+                    >
                       Pricing
                     </Link>
                   </li>
