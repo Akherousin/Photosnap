@@ -25,7 +25,7 @@ function FeaturesPage() {
       </Section>
       <Features>
         {featuresList.map(({ title, desc, icon }) => (
-          <Features.Card key={title} icon={<img src={icon} alt="" />}>
+          <Features.Card key={title} icon={icon}>
             <h3 className="heading-small">{title}</h3>
             <p className="main-text">{desc}</p>
           </Features.Card>

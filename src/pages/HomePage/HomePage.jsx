@@ -88,7 +88,14 @@ function HomePage() {
         {storiesList.slice(0, 4).map(({ title, image, author, date }) => (
           <Stories.Article
             key={title}
-            image={<Image pageName="stories" imageName={image} noTabletSizes />}
+            image={
+              <Image
+                pageName="stories"
+                imageName={image}
+                alt=""
+                noTabletSizes
+              />
+            }
             link={
               <StyledLink variant="light" href="#">
                 Read More{' '}
@@ -105,7 +112,7 @@ function HomePage() {
 
       <Features>
         {featuresList.slice(0, 3).map(({ icon, title, desc }) => (
-          <Features.Card key={title} icon={<img src={icon} alt="" />}>
+          <Features.Card key={title} icon={icon}>
             <h3 className="heading-small">{title}</h3>
             <p className="main-text">{desc}</p>
           </Features.Card>
