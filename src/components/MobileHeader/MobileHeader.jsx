@@ -59,10 +59,6 @@ function MobileHeader() {
     };
 
     headerRef.current.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      headerRef.current.removeEventListener('keydown', handleKeyDown);
-    };
   }, []);
 
   return (
