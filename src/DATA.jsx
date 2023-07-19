@@ -136,7 +136,7 @@ export const pricingPlans = [
     desc: 'Includes basic usage of our platform. Recommended for new and aspiring photographers.',
     recommended: false,
     price: {
-      mounthly: '19.00',
+      monthly: '19.00',
       yearly: '190.00',
     },
   },
@@ -145,7 +145,7 @@ export const pricingPlans = [
     desc: 'More advanced features available. Recommended for photography veterans and professionals.',
     recommended: true,
     price: {
-      mounthly: '39.00',
+      monthly: '39.00',
       yearly: '390.00',
     },
   },
@@ -154,7 +154,7 @@ export const pricingPlans = [
     desc: 'Additional features available such as more detailed metrics. Recommended for business owners.',
     recommended: false,
     price: {
-      mounthly: '99.00',
+      monthly: '99.00',
       yearly: '990.00',
     },
   },

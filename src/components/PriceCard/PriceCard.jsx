@@ -2,7 +2,7 @@ import Button from '../Button';
 import styles from './PriceCard.module.scss';
 import classNames from 'classnames';
 
-function PriceCard({ title, desc, price, recommended }) {
+function PriceCard({ title, desc, price, plan, recommended }) {
   const classes = classNames(styles.card, {
     [styles.recommended]: recommended,
   });
@@ -15,7 +15,9 @@ function PriceCard({ title, desc, price, recommended }) {
       </header>
       <p>
         <span className="heading-large">${price}</span>
-        <span className="main-text">per month</span>
+        <span className="main-text">
+          per {plan === 'monthly' ? 'month' : 'year'}
+        </span>
       </p>
       <Button variant={recommended ? 'light' : 'dark'}>
         Pick Plan <span className="visually-hidden">{title}</span>

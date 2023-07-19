@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { pricingPlans } from '../../DATA';
 
 function PriceSection() {
-  const [selectedPlan, setSelectedPlan] = useState('mounthly');
+  const [selectedPlan, setSelectedPlan] = useState('monthly');
 
   return (
     <section className={styles.section}>
@@ -21,6 +21,7 @@ function PriceSection() {
             <PriceCard
               title={title}
               desc={desc}
+              plan={selectedPlan}
               price={price[selectedPlan]}
               recommended={recommended}
             />
