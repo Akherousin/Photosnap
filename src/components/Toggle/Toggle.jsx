@@ -25,7 +25,14 @@ function Toggle({ firstValue, secondValue, onChange }) {
       >
         {firstValue}
       </label>
-      <span className={styles.radio_switch__wrapper}>
+      <span
+        className={styles.radio_switch__wrapper}
+        onClick={() => {
+          currentValue === firstValue
+            ? setCurrentValue(secondValue)
+            : setCurrentValue(firstValue);
+        }}
+      >
         <input
           type="radio"
           name="plan"
