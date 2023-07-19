@@ -18,7 +18,14 @@ function StoriesPage() {
         {storiesList.map(({ title, image, author, date }) => (
           <Stories.Article
             key={title}
-            image={<Image pageName="stories" imageName={image} noTabletSizes />}
+            image={
+              <Image
+                pageName="stories"
+                imageName={image}
+                noTabletSizes
+                alt=""
+              />
+            }
             link={
               <StyledLink variant="light" href="#">
                 Read More{' '}

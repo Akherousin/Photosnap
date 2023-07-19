@@ -14,7 +14,13 @@ function FeaturesPage() {
     <>
       <Section
         hasDecoration
-        image={<Image pageName="features" imageName="hero" />}
+        image={
+          <Image
+            pageName="features"
+            imageName="hero"
+            alt="From behind, the photographer's right arm and leg emerge, clutching a sleek camera. The background fades into the blur."
+          />
+        }
       >
         <h1 className="heading-large">Features</h1>
         <p className="main-text">

@@ -8,7 +8,7 @@ function FeaturedStory() {
       <Image
         pageName="stories"
         imageName="moon-of-appalacia"
-        alt="Appalacia mountains"
+        alt="The full moon casts a pale glow over the snow-capped peaks, where a misty veil shrouds the evergreen woods below. A blue hue imbues the scene with a touch of mystery."
       />
       <div className={styles.story__content}>
         <h1 id="featured-story" className="heading-xsmall">

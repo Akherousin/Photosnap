@@ -13,7 +13,13 @@ function PricingPage() {
     <>
       <Section
         hasDecoration
-        image={<Image pageName="pricing" imageName="hero" />}
+        image={
+          <Image
+            pageName="pricing"
+            imageName="hero"
+            alt="A woman's silhouette contrasts with the crimson sky, as she gazes into the camera."
+          />
+        }
       >
         <h1 className="heading-large">Pricing</h1>
         <p className="main-text">

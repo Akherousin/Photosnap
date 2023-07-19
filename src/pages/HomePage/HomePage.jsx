@@ -21,7 +21,7 @@ function HomePage() {
           <Image
             pageName="home"
             imageName="create-and-share"
-            alt="A photographer standing on a bridge looking at a lake with mountains in the background"
+            alt="A photographer, standing on a bridge, looking at a lake with mountains in the background."
           />
         }
         link={
@@ -44,7 +44,7 @@ function HomePage() {
           <Image
             pageName="home"
             imageName="beautiful-stories"
-            alt="A photographer standing on a bridge looking at a lake with mountains in the background"
+            alt="In a bright room, a laptop sits on a desktop surrounded by books and a calendar. On the screen, a photo-editing program shows a curly-haired child’s image, which the photographer is working on."
           />
         }
         link={
@@ -67,7 +67,7 @@ function HomePage() {
           <Image
             pageName="home"
             imageName="designed-for-everyone"
-            alt="A photographer standing on a bridge looking at a lake with mountains in the background"
+            alt="A bearded photographer wearing a black T-shirt holds a professional camera and looks into the lens. He stands against a black background."
           />
         }
         link={
