@@ -23,55 +23,73 @@ function Image({
       <source
         media={QUERIES.MOBILEANDDOWN}
         type="image/avif"
-        srcSet={`/assets/${pageName}/mobile/${imageName}.avif`}
+        srcSet={`/assets/${pageName}/mobile/${imageName}.avif 1x, 
+        /assets/${pageName}/mobile/${imageName}-2x.avif 2x`}
       />
       <source
         media={QUERIES.TABLETANDUP}
         type="image/avif"
         srcSet={`/assets/${pageName}/${
           noTabletSizes ? 'desktop' : 'tablet'
-        }/${imageName}.avif`}
+        }/${imageName}.avif 1x, 
+        /assets/${pageName}/${
+          noTabletSizes ? 'desktop' : 'tablet'
+        }/${imageName}-2x.avif 2x
+        `}
       />
       <source
         media={QUERIES.DESKTOPANDUP}
         type="image/avif"
-        srcSet={`/assets/${pageName}/desktop/${imageName}.avif`}
+        srcSet={`/assets/${pageName}/desktop/${imageName}.avif 1x,
+        /assets/${pageName}/desktop/${imageName}-2x.avif 2x`}
       />
 
       <source
         media={QUERIES.MOBILEANDDOWN}
         type="image/webp"
-        srcSet={`/assets/${pageName}/mobile/${imageName}.webp`}
+        srcSet={`/assets/${pageName}/mobile/${imageName}.webp 1x, 
+        /assets/${pageName}/mobile/${imageName}-2x.webp 2x `}
       />
       <source
         media={QUERIES.TABLETANDUP}
         type="image/webp"
         srcSet={`/assets/${pageName}/${
           noTabletSizes ? 'desktop' : 'tablet'
-        }/${imageName}.webp`}
+        }/${imageName}.webp 1x,
+        /assets/${pageName}/${
+          noTabletSizes ? 'desktop' : 'tablet'
+        }/${imageName}-2x.webp 2x
+        `}
       />
       <source
         media={QUERIES.DESKTOPANDUP}
         type="image/webp"
-        srcSet={`/assets/${pageName}/desktop/${imageName}.webp`}
+        srcSet={`/assets/${pageName}/desktop/${imageName}.webp 1x,
+        /assets/${pageName}/desktop/${imageName}-2x.webp 2x`}
       />
 
       <source
         media={QUERIES.MOBILEANDDOWN}
         type="image/jpg"
-        srcSet={`/assets/${pageName}/mobile/${imageName}.jpg`}
+        srcSet={`/assets/${pageName}/mobile/${imageName}.jpg 1x,
+        /assets/${pageName}/mobile/${imageName}-2x.jpg 2x`}
       />
       <source
         media={QUERIES.TABLETANDUP}
         type="image/jpg"
         srcSet={`/assets/${pageName}/${
           noTabletSizes ? 'desktop' : 'tablet'
-        }/${imageName}.jpg`}
+        }/${imageName}.jpg 1x,
+        /assets/${pageName}/${
+          noTabletSizes ? 'desktop' : 'tablet'
+        }/${imageName}-2x.jpg 2x
+        `}
       />
       <source
         media={QUERIES.DESKTOPANDUP}
         type="image/jpg"
-        srcSet={`/assets/${pageName}/desktop/${imageName}.jpg`}
+        srcSet={`/assets/${pageName}/desktop/${imageName}.jpg 1x, 
+        /assets/${pageName}/desktop/${imageName}-2x.jpg 2x,`}
       />
 
       <img
