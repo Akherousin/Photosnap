@@ -7,9 +7,9 @@ function Advertisement() {
     <div className={styles.advertisement}>
       <Image pageName="shared" imageName="bg-beta" alt="" />
       <div className={styles.advertisement__wrapper}>
-        <strong className="heading-large">
+        <h2 className="heading-large">
           We&apos;re in beta. Get your invite today!
-        </strong>
+        </h2>
         <StyledLink href="#" variant="light">
           Get an invite
         </StyledLink>
