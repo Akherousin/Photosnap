@@ -11,7 +11,7 @@ function PriceSection() {
   return (
     <section className={styles.section}>
       <Toggle
-        firstValue="mounthly"
+        firstValue="monthly"
         secondValue="yearly"
         onChange={setSelectedPlan}
       />
