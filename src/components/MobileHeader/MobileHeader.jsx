@@ -77,9 +77,7 @@ function MobileHeader() {
             aria-expanded={isMenuOpen}
             aria-controls="nav__list"
           >
-            <span className="visually-hidden">
-              {isMenuOpen ? 'Close Menu' : 'Open Menu'}
-            </span>
+            <span className="visually-hidden">Menu</span>
 
             {isMenuOpen ? (
               <CloseSVG aria-hidden="true" focusable="false" />
