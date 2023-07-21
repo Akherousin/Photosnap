@@ -68,67 +68,68 @@ function MobileHeader() {
       )}
       <header className={styles.header} ref={headerRef}>
         <Logo />
-        <button
-          ref={menuBtn}
-          className={`${styles.menu__button} click-target-helper`}
-          onClick={toggleMenu}
-          aria-expanded={isMenuOpen}
-        >
-          <span className="visually-hidden">
-            {isMenuOpen ? 'Close Navigation' : 'Open Navigation'}
-          </span>
 
+        <nav className={styles.nav} aria-label="Site">
+          <button
+            ref={menuBtn}
+            className={`click-target-helper`}
+            onClick={toggleMenu}
+            aria-expanded={isMenuOpen}
+            aria-controls="nav__list"
+          >
+            <span className="visually-hidden">
+              {isMenuOpen ? 'Close Menu' : 'Open Menu'}
+            </span>
+
+            {isMenuOpen ? (
+              <CloseSVG aria-hidden="true" focusable="false" />
+            ) : (
+              <MenuSVG aria-hidden="true" focusable="false" />
+            )}
+          </button>
           {isMenuOpen ? (
-            <CloseSVG aria-hidden="true" focusable="false" />
-          ) : (
-            <MenuSVG aria-hidden="true" focusable="false" />
-          )}
-        </button>
-
-        {isMenuOpen && (
-          <div className={styles.menu} ref={menuRef}>
-            <div className={styles.menu__content}>
-              <nav className={styles.nav} aria-label="Site">
-                <ul className={styles.nav__list}>
-                  <li>
-                    <Link
-                      to="/stories"
-                      className={styles.nav__link}
-                      onClick={() => {
-                        setIsMenuOpen(!isMenuOpen);
-                      }}
-                    >
-                      Stories
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/features"
-                      className={styles.nav__link}
-                      onClick={() => {
-                        setIsMenuOpen(!isMenuOpen);
-                      }}
-                    >
-                      Features
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/pricing"
-                      className={styles.nav__link}
-                      onClick={() => {
-                        setIsMenuOpen(!isMenuOpen);
-                      }}
-                    >
-                      Pricing
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-              <Button ref={ctaBtn}>Get an Invite</Button>
-            </div>
-          </div>
-        )}
+            <>
+              <ul className={styles.nav__list} id="nav__list">
+                <li>
+                  <Link
+                    to="/stories"
+                    className={styles.nav__link}
+                    onClick={() => {
+                      setIsMenuOpen(!isMenuOpen);
+                    }}
+                  >
+                    Stories
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/features"
+                    className={styles.nav__link}
+                    onClick={() => {
+                      setIsMenuOpen(!isMenuOpen);
+                    }}
+                  >
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/pricing"
+                    className={styles.nav__link}
+                    onClick={() => {
+                      setIsMenuOpen(!isMenuOpen);
+                    }}
+                  >
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Button ref={ctaBtn}>Get an Invite</Button>
+                </li>
+              </ul>
+            </>
+          ) : null}
+        </nav>
       </header>
     </>
   );
