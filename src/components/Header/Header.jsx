@@ -1,6 +1,6 @@
 import Button from '../Button';
 import Logo from '../Logo';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 function Header() {
@@ -11,19 +11,19 @@ function Header() {
         <nav aria-label="Site" className={styles.nav}>
           <ul className={styles.nav__list}>
             <li>
-              <Link to="/stories" className={styles.nav__link}>
+              <NavLink to="/stories" className={styles.nav__link}>
                 Stories
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/features" className={styles.nav__link}>
+              <NavLink to="/features" className={styles.nav__link}>
                 Features
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/pricing" className={styles.nav__link}>
+              <NavLink to="/pricing" className={styles.nav__link}>
                 Pricing
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>

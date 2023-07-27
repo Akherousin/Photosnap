@@ -2,7 +2,7 @@ import Logo from '../Logo/Logo';
 
 import styles from './MobileHeader.module.scss';
 import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Button from '../Button';
 
 function MobileHeader() {
@@ -89,7 +89,7 @@ function MobileHeader() {
             <>
               <ul className={styles.nav__list} id="nav__list">
                 <li>
-                  <Link
+                  <NavLink
                     to="/stories"
                     className={styles.nav__link}
                     onClick={() => {
@@ -97,10 +97,10 @@ function MobileHeader() {
                     }}
                   >
                     Stories
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link
+                  <NavLink
                     to="/features"
                     className={styles.nav__link}
                     onClick={() => {
@@ -108,10 +108,10 @@ function MobileHeader() {
                     }}
                   >
                     Features
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link
+                  <NavLink
                     to="/pricing"
                     className={styles.nav__link}
                     onClick={() => {
@@ -119,7 +119,7 @@ function MobileHeader() {
                     }}
                   >
                     Pricing
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
                   <Button ref={ctaBtn}>Get an Invite</Button>

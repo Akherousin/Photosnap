@@ -1,6 +1,6 @@
 import StyledLink from '../StyledLink';
 import Logo from '../Logo';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Footer.module.scss';
 
 function Footer() {
@@ -44,24 +44,24 @@ function Footer() {
 
         <ul className={styles.footer__nav}>
           <li>
-            <Link className="heading-xsmall" to="/">
+            <NavLink className="heading-xsmall" to="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="heading-xsmall" to="/stories">
+            <NavLink className="heading-xsmall" to="/stories">
               Stories
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="heading-xsmall" to="/features">
+            <NavLink className="heading-xsmall" to="/features">
               Features
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="heading-xsmall" to="/pricing">
+            <NavLink className="heading-xsmall" to="/pricing">
               Pricing
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
