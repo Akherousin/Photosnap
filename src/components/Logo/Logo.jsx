@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Logo({ variant = 'dark' }) {
   const gradientId = React.useId();
 
   return (
-    <Link to="/">
+    <NavLink to="/">
       <span className="visually-hidden">Photosnap - Home</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ function Logo({ variant = 'dark' }) {
           <path fill={`url(#${gradientId})`} d="M0 16L9.5 0 19 16z" />
         </g>
       </svg>
-    </Link>
+    </NavLink>
   );
 }
 
