@@ -7,6 +7,12 @@
   &__wrapper {
     display: inline-flex;
     position: relative;
+
+    &:focus-within {
+      outline: 2px solid var(--color-black);
+      outline-offset: 4px;
+      border-radius: 999px;
+    }
   }
 
   svg {
