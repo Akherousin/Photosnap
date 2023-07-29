@@ -89,7 +89,7 @@ function Image({
         media={QUERIES.DESKTOPANDUP}
         type="image/jpg"
         srcSet={`/assets/${pageName}/desktop/${imageName}.jpg 1x, 
-        /assets/${pageName}/desktop/${imageName}-2x.jpg 2x,`}
+        /assets/${pageName}/desktop/${imageName}-2x.jpg 2x`}
       />
 
       <img
