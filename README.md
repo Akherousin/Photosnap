@@ -51,11 +51,11 @@ Users should be able to:
 
 #### click-target-helper class
 
-The project heavily uses the `.click-target-helper` utility class. It creates a pseudoelement that increases the click area without affecting the design. This way, users can easily interact with small or irregularly shaped elements.
+The project heavily uses the `.click-target-helper` utility class.
 
 This class has the following features:
 
-- It creates a pseudoelement that increases the click area without affecting the design.
+- It creates a pseudoelement that increases the click area without affecting the design. This way, users can easily interact with small or irregularly shaped elements.
 - It uses CSS variables to set the minimum size and the inset of the pseudoelement.
 - It applies position: relative to the element and position: absolute to the pseudoelement.
 
@@ -93,7 +93,7 @@ The `.visually-hidden` class is a common technique for solving this problem. It 
 
 One example of using the .visually-hidden class in my project is on the Stories Page. This page displays a list of articles with a title, an image, and a link to read more. The visual label of the link is “Read More”, but since there are numerous links to different articles, the screen reader will just read something like “Read More, Link, Read More, Link, Read More, Link” which is confusing and not helpful.
 
-Using the `.visually-hidden` class, we can provide further details about where the link is heading. For example, if the title of the article is “The Milky Way”, we can add a span element with the `.visually-hidden` class and the text “about The Milky Way”. This way, the screen reader will read “Read More about The Milky Way, Link”, which is much more informative and clear.
+Using the `.visually-hidden` class, I provided further details about where the link is heading. For example, if the title of the article is “The Milky Way”, I added a span element with the `.visually-hidden` class and the text “about The Milky Way”. This way, the screen reader will read “Read More about The Milky Way, Link”, which is much more informative and clear.
 
 Here is the code for this example:
 
