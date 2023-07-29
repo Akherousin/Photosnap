@@ -28,9 +28,11 @@ function Toggle({ firstValue, secondValue, onChange }) {
       <span
         className={styles.radio_switch__wrapper}
         onClick={() => {
-          currentValue === firstValue
-            ? setCurrentValue(secondValue)
-            : setCurrentValue(firstValue);
+          const nextValue =
+            currentValue === firstValue ? secondValue : firstValue;
+
+          setCurrentValue(nextValue);
+          onChange(nextValue);
         }}
       >
         <input
