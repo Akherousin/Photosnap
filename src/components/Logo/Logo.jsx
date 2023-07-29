@@ -5,7 +5,7 @@ function Logo({ variant = 'dark' }) {
   const gradientId = React.useId();
 
   return (
-    <NavLink to="/">
+    <NavLink to="/" className="click-target-helper">
       <span className="visually-hidden">Photosnap - Home</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -25,7 +25,7 @@ function FeaturedStory() {
           eastern Kentucky and West Virginia, and while the ridges are not high,
           the terrain is extremely rugged.
         </p>
-        <StyledLink variant="light" href="#">
+        <StyledLink variant="light" href="#" noClickHelper>
           Read the story{' '}
           <span className="visually-hidden">Hazy full moon of Appalachia.</span>
         </StyledLink>

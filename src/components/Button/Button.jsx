@@ -17,7 +17,8 @@ const Button = forwardRef(function Button(
   const classes = classNames(
     className,
     styles.button,
-    styles[`button--${variant}`]
+    styles[`button--${variant}`],
+    'click-target-helper'
   );
 
   return (

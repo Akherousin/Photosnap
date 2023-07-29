@@ -14,17 +14,26 @@ function Header() {
           </span>
           <ul className={styles.nav__list}>
             <li>
-              <NavLink to="/stories" className={styles.nav__link}>
+              <NavLink
+                to="/stories"
+                className={`${styles.nav__link} click-target-helper`}
+              >
                 Stories
               </NavLink>
             </li>
             <li>
-              <NavLink to="/features" className={styles.nav__link}>
+              <NavLink
+                to="/features"
+                className={`${styles.nav__link} click-target-helper`}
+              >
                 Features
               </NavLink>
             </li>
             <li>
-              <NavLink to="/pricing" className={styles.nav__link}>
+              <NavLink
+                to="/pricing"
+                className={`${styles.nav__link} click-target-helper`}
+              >
                 Pricing
               </NavLink>
             </li>

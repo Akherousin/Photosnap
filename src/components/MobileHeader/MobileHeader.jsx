@@ -91,7 +91,7 @@ function MobileHeader() {
                 <li>
                   <NavLink
                     to="/stories"
-                    className={styles.nav__link}
+                    className={`${styles.nav__link} click-target-helper`}
                     onClick={() => {
                       setIsMenuOpen(!isMenuOpen);
                     }}
@@ -102,7 +102,7 @@ function MobileHeader() {
                 <li>
                   <NavLink
                     to="/features"
-                    className={styles.nav__link}
+                    className={`${styles.nav__link} click-target-helper`}
                     onClick={() => {
                       setIsMenuOpen(!isMenuOpen);
                     }}
@@ -113,7 +113,7 @@ function MobileHeader() {
                 <li>
                   <NavLink
                     to="/pricing"
-                    className={styles.nav__link}
+                    className={`${styles.nav__link} click-target-helper`}
                     onClick={() => {
                       setIsMenuOpen(!isMenuOpen);
                     }}

@@ -44,22 +44,31 @@ function Footer() {
 
         <ul className={styles.footer__nav}>
           <li>
-            <NavLink className="heading-xsmall" to="/">
+            <NavLink className="heading-xsmall click-target-helper" to="/">
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink className="heading-xsmall" to="/stories">
+            <NavLink
+              className="heading-xsmall click-target-helper"
+              to="/stories"
+            >
               Stories
             </NavLink>
           </li>
           <li>
-            <NavLink className="heading-xsmall" to="/features">
+            <NavLink
+              className="heading-xsmall click-target-helper"
+              to="/features"
+            >
               Features
             </NavLink>
           </li>
           <li>
-            <NavLink className="heading-xsmall" to="/pricing">
+            <NavLink
+              className="heading-xsmall click-target-helper"
+              to="/pricing"
+            >
               Pricing
             </NavLink>
           </li>

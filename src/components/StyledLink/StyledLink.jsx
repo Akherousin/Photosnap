@@ -5,7 +5,7 @@ import styles from './StyledLink.module.scss';
 const possibleVariants = ['dark', 'light'];
 
 const StyledLink = forwardRef(function StyledLink(
-  { variant = 'dark', children, href, className, ...rest },
+  { variant = 'dark', children, href, className, noClickHelper, ...rest },
   ref
 ) {
   if (typeof variant !== 'string' || !possibleVariants.includes(variant)) {
@@ -17,7 +17,8 @@ const StyledLink = forwardRef(function StyledLink(
   const classes = classNames(
     className,
     styles.link,
-    styles[`link--${variant}`]
+    styles[`link--${variant}`],
+    { 'click-target-helper': !noClickHelper }
   );
 
   return (
