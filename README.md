@@ -111,7 +111,7 @@ Animations can enhance the user experience and the visual appeal of your website
 
 Mobile navigation is a common feature of many websites that allows users to access different pages or sections of the website from a small screen. However, mobile navigation can also pose some challenges for accessibility, especially for users who rely on assistive technologies (AT) such as screen readers or keyboard navigation.
 
-- One of the best practices for mobile navigation is to place the button that opens and closes the navigation menu inside the <nav> element. This way, AT users can easily access the landmark that represents the navigation region and activate the button to toggle the menu.
+- One of the best practices for mobile navigation is to place the button that opens and closes the navigation menu inside the `<nav>` element. This way, AT users can easily access the landmark that represents the navigation region and activate the button to toggle the menu.
 - To indicate the state of the button and the menu, I used the `aria-expanded`and `aria-controls` attributes. The `aria-expanded` attribute tells AT users whether the menu is expanded or collapsed, while the `aria-controls` attribute tells AT users which element is controlled by the button.
 - Another technique I used is to close the menu when the user presses the Esc key.
 - I also implemented tab trapping inside the menu. This means that when the menu is open, only the elements inside the menu can be focused by pressing <kbd>Tab</kbd> or <kbd>Shift</kbd>+<kbd>Tab</kbd>. This prevents users from accidentally moving their focus outside of the menu and losing their context.
@@ -137,7 +137,7 @@ const tabTrap = (e) => {
 #### Accessible Toggle Component
 
 This project showcases how I implemented a toggle component on the pricing page of a website. The toggle component allows the user to switch between monthly and yearly plans, and it looks like a simple switch component. However, I wanted to make it accessible for assistive technologies (AT) such as screen readers, so that they can announce which pricing plan was chosen.
-The usual way to create a switch component is to use an <input type='checkbox'> element and style it with CSS. However, this approach has some drawbacks when it comes to accessibility: a checkbox only has two possible states: checked or unchecked. This means that the screen reader will only announce something like “Monthly plan, checked” or “Monthly plan, unchecked”, and not indicate if the “Yearly plan” was chosen.
+The usual way to create a switch component is to use an `<input type='checkbox'/>` element and style it with CSS. However, this approach has some drawbacks when it comes to accessibility: a checkbox only has two possible states: checked or unchecked. This means that the screen reader will only announce something like “Monthly plan, checked” or “Monthly plan, unchecked”, and not indicate if the “Yearly plan” was chosen.
 To overcome these challenges, I decided to use two radio buttons instead of a checkbox, and make them look like a classic toggle using SVG. Radio buttons have some advantages over checkboxes:
 
 - Radio buttons can have multiple values, and only one of them can be selected at a time. This means that the screen reader can announce something like “Monthly plan, selected” or “Yearly plan, selected”, and indicate which option is currently active.
@@ -186,7 +186,7 @@ This structure works better for mobile, where users are used to scrolling vertic
 
 - [Codepen by Kevin Kipp .click-target-helper class](https://codepen.io/third774/pen/XWgXZRY) - I used the `.click-target-helper` from this clever codepen.
 - [The Anatomy of visually-hidden](https://www.tpgi.com/the-anatomy-of-visually-hidden/)
-- [Navigation Landmark Discoverability](https://www.scottohara.me/blog/2016/08/10/discovering-landmarks.html) - An article by Scott O’Hara that explains the common mistake of placing the menu button outside the <nav> element.
+- [Navigation Landmark Discoverability](https://www.scottohara.me/blog/2016/08/10/discovering-landmarks.html) - An article by Scott O’Hara that explains the common mistake of placing the menu button outside the `<nav>` element.
 - [On Designing and Building Toggle Switches](https://www.sarasoueidan.com/blog/toggle-switch-design/) - An amazing article by Sara Soueidan about building accessible toggle switches. My implementation of the toggle component is based on this article.
 - [Inclusive Components: Data Tables](https://inclusive-components.design/data-tables/) by Heydon Pickering.
 
