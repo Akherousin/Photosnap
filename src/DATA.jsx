@@ -62,31 +62,31 @@ export const storiesList = [
   {
     title: 'Behind the Waves',
     author: 'Lamarr Wilson',
-    date: 'March11th2020',
+    date: 'March 11th 2020',
     image: 'behind-the-waves',
   },
   {
     title: 'Calm Waters',
     author: 'Samantha Brooke',
-    date: 'March9th2020',
+    date: 'March 9th 2020',
     image: 'calm-waters',
   },
   {
     title: 'The Milky Way',
     author: 'Benjamin Cruz',
-    date: 'March5th2020',
+    date: 'March 5th 2020',
     image: 'milky-way',
   },
   {
     title: 'Night at The Dark Forest',
     author: 'Mohammed Abdul',
-    date: 'March4th2020',
+    date: 'March 4th 2020',
     image: 'dark-forest',
   },
   {
-    title: 'Somwarpet’s Beauty',
+    title: 'SomwarpetU+0060s Beauty',
     author: 'Michelle',
-    date: 'March1st2020',
+    date: 'March 1st 2020',
     image: 'somwarpet',
   },
   {
