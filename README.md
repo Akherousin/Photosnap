@@ -91,15 +91,15 @@ Accessibility is an important aspect of web development that ensures that everyo
 
 The `.visually-hidden` class is a common technique for solving this problem. It makes the content inaccessible visually, yet accessible to assistive technologies (AT) such as screen readers. It allows you to create semantic and meaningful HTML elements that convey the purpose and function of the component to AT users.
 
-One example of using the .visually-hidden class in my project is on the Stories Page. This page displays a list of articles with a title, an image, and a link to read more. The visual label of the link is “Read More”, but since there are numerous links to different articles, the screen reader will just read something like “Read More, Link, Read More, Link, Read More, Link” which is confusing and not helpful.
+One example of using the .visually-hidden class in my project is on the Stories Page. This page displays a list of articles with a title, an image, and a link to read more. The visual label of the link is “Read Story”, but since there are numerous links to different articles, the screen reader will just read something like “Read Story, Link, Read Story, Link, Read Story, Link” which is confusing and not helpful.
 
-Using the `.visually-hidden` class, I provided further details about where the link is heading. For example, if the title of the article is “The Milky Way”, I added a span element with the `.visually-hidden` class and the text “about The Milky Way”. This way, the screen reader will read “Read More about The Milky Way, Link”, which is much more informative and clear.
+Using the `.visually-hidden` class, I provided further details about where the link is heading. For example, if the title of the article is “The Milky Way”, I added a span element with the `.visually-hidden` class and the text “about The Milky Way”. This way, the screen reader will read “Read Story about The Milky Way, Link”, which is much more informative and clear.
 
 Here is the code for this example:
 
 ```jsx
 <StyledLink href="#">
-  Read More <span className="visually-hidden">about {title}.</span>
+  Read Story <span className="visually-hidden">about {title}.</span>
 </StyledLink>
 ```
 

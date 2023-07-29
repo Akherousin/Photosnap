@@ -85,7 +85,7 @@ function HomePage() {
       </Section>
 
       <Stories>
-        {storiesList.slice(0, 4).map(({ title, image, author, date }) => (
+        {storiesList.slice(0, 4).map(({ title, image, author }) => (
           <Stories.Article
             key={title}
             image={
@@ -98,12 +98,11 @@ function HomePage() {
             }
             link={
               <StyledLink variant="light" href="#">
-                Read More{' '}
+                Read Story{' '}
                 <span className="visually-hidden">about {title}.</span>
               </StyledLink>
             }
           >
-            <time>{date}</time>
             <h3>{title}</h3>
             <p>by {author}</p>
           </Stories.Article>

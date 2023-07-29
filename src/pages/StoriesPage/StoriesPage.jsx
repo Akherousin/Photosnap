@@ -28,7 +28,7 @@ function StoriesPage() {
             }
             link={
               <StyledLink variant="light" href="#">
-                Read More{' '}
+                Read Story{' '}
                 <span className="visually-hidden">about {title}.</span>
               </StyledLink>
             }
