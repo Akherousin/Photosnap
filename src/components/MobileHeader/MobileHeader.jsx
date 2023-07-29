@@ -75,7 +75,7 @@ function MobileHeader() {
             className={`click-target-helper`}
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
-            aria-controls="nav__list"
+            aria-controls="nav__list--mobile"
           >
             <span className="visually-hidden">Navigation</span>
 
@@ -87,7 +87,7 @@ function MobileHeader() {
           </button>
           {isMenuOpen ? (
             <>
-              <ul className={styles.nav__list} id="nav__list">
+              <ul className={styles.nav__list} id="nav__list--mobile">
                 <li>
                   <NavLink
                     to="/stories"
