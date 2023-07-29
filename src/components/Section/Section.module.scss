@@ -119,14 +119,27 @@
     top: calc(var(--padding-block-mobile) * (-1));
   }
 
+  &[data-on-hover='true'] {
+    transition: transform 200ms ease-in;
+    transform: translateX(-100%);
+
+    @media screen and (max-width: 47.9999rem) {
+      transform: translateX(0);
+    }
+  }
+
   &__wrapper {
     display: grid;
     place-content: center;
     width: 100%;
     position: relative;
     height: fit-content;
-
     padding-inline: 112px 111px;
+
+    & > a:hover + .decoration[data-on-hover='true'] {
+      transition: transform 100ms ease-out;
+      transform: translateX(0);
+    }
 
     @media screen and (max-width: 47.9999rem) {
       padding-inline: 54px;

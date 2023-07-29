@@ -9,6 +9,7 @@ function Section({
   variant = 'dark',
   isReversed,
   hasDecoration,
+  decorationOnHover = false,
   children,
   ...rest
 }) {
@@ -30,9 +31,14 @@ function Section({
     <section className={sectionClasses} {...rest}>
       <div className={styles.section__content}>
         <div className={styles.decoration__wrapper}>
-          {hasDecoration && <div className={styles.decoration} />}
           {children}
           {link}
+          {hasDecoration && (
+            <div
+              className={styles.decoration}
+              data-on-hover={decorationOnHover ? true : false}
+            />
+          )}
         </div>
       </div>
       {image}

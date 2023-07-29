@@ -17,6 +17,7 @@ function HomePage() {
     <>
       <Section
         hasDecoration
+        decorationOnHover
         image={
           <Image
             pageName="home"
