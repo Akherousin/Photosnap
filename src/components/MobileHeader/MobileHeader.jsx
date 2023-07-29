@@ -69,7 +69,7 @@ function MobileHeader() {
       <header className={styles.header} ref={headerRef}>
         <Logo />
 
-        <nav className={styles.nav} aria-label="Site">
+        <nav className={styles.nav} aria-labelledby="nav-label">
           <button
             ref={menuBtn}
             className={`click-target-helper`}
@@ -77,7 +77,7 @@ function MobileHeader() {
             aria-expanded={isMenuOpen}
             aria-controls="nav__list"
           >
-            <span className="visually-hidden">Menu</span>
+            <span className="visually-hidden">Navigation</span>
 
             {isMenuOpen ? (
               <CloseSVG aria-hidden="true" focusable="false" />

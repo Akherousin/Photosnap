@@ -8,7 +8,10 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Logo />
-        <nav aria-label="Site" className={styles.nav}>
+        <nav aria-labelledby="nav-label" className={styles.nav}>
+          <span id="nav-label" hidden>
+            Site
+          </span>
           <ul className={styles.nav__list}>
             <li>
               <NavLink to="/stories" className={styles.nav__link}>
