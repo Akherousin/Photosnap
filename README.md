@@ -189,6 +189,7 @@ This structure works better for mobile, where users are used to scrolling vertic
 - [Navigation Landmark Discoverability](https://www.scottohara.me/blog/2016/08/10/discovering-landmarks.html) - An article by Scott O’Hara that explains the common mistake of placing the menu button outside the `<nav>` element.
 - [On Designing and Building Toggle Switches](https://www.sarasoueidan.com/blog/toggle-switch-design/) - An amazing article by Sara Soueidan about building accessible toggle switches. My implementation of the toggle component is based on this article.
 - [Inclusive Components: Data Tables](https://inclusive-components.design/data-tables/) by Heydon Pickering.
+- [The universal focus state](https://www.erikkroes.nl/blog/the-universal-focus-state/) - I used the 'oreo' style focus indicators from Erik Kroes.
 
 ## Author
 
