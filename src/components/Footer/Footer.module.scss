@@ -57,6 +57,11 @@
       fill: var(--color-white);
     }
 
+    a:focus {
+      box-shadow: revert;
+      outline: revert;
+    }
+
     a:hover .logo,
     a:focus .logo {
       &__facebook {
