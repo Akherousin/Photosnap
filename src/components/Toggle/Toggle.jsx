@@ -34,6 +34,16 @@ function Toggle({ firstValue, secondValue, onChange }) {
           setCurrentValue(nextValue);
           onChange(nextValue);
         }}
+        onKeyDown={(e) => {
+          if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault();
+            const nextValue =
+              currentValue === firstValue ? secondValue : firstValue;
+
+            setCurrentValue(nextValue);
+            onChange(nextValue);
+          }
+        }}
       >
         <input
           type="radio"
