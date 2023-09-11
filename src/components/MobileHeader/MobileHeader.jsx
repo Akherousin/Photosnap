@@ -2,8 +2,8 @@ import Logo from '../Logo/Logo';
 
 import styles from './MobileHeader.module.scss';
 import { useState, useRef, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import Button from '../Button';
+import NavLinkWithPrev from '../NavLinkWithPrev/NavLinkWithPrev';
 
 function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +28,8 @@ function MobileHeader() {
 
   useEffect(() => {
     const tabTrap = (e) => {
+      if (!isMenuOpen) return;
+
       if (e.key !== 'Tab' || e.keyCode !== 9) return;
 
       if (e.shiftKey) {
@@ -46,7 +48,7 @@ function MobileHeader() {
     return () => {
       window.removeEventListener('keydown', tabTrap);
     };
-  }, []);
+  }, [isMenuOpen]);
 
   // Close menu on pressing Escape key
 
@@ -89,7 +91,7 @@ function MobileHeader() {
             <>
               <ul className={styles.nav__list} id="nav__list--mobile">
                 <li>
-                  <NavLink
+                  <NavLinkWithPrev
                     to="/stories"
                     className={`${styles.nav__link} click-target-helper`}
                     onClick={() => {
@@ -97,10 +99,10 @@ function MobileHeader() {
                     }}
                   >
                     Stories
-                  </NavLink>
+                  </NavLinkWithPrev>
                 </li>
                 <li>
-                  <NavLink
+                  <NavLinkWithPrev
                     to="/features"
                     className={`${styles.nav__link} click-target-helper`}
                     onClick={() => {
@@ -108,10 +110,10 @@ function MobileHeader() {
                     }}
                   >
                     Features
-                  </NavLink>
+                  </NavLinkWithPrev>
                 </li>
                 <li>
-                  <NavLink
+                  <NavLinkWithPrev
                     to="/pricing"
                     className={`${styles.nav__link} click-target-helper`}
                     onClick={() => {
@@ -119,7 +121,7 @@ function MobileHeader() {
                     }}
                   >
                     Pricing
-                  </NavLink>
+                  </NavLinkWithPrev>
                 </li>
                 <li>
                   <Button ref={ctaBtn}>Get an Invite</Button>

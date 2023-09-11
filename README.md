@@ -43,6 +43,7 @@ Users should be able to:
 - CSS Grid
 - Responsive Design
 - CSS Animations
+- [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/) - JS library
 - [React Router v6](https://reactrouter.com/en/main) - JS routing library
 - [Sass](https://sass-lang.com/) - CSS preprocessor

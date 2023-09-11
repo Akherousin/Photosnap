@@ -1,9 +1,11 @@
 import Button from '../Button';
 import Logo from '../Logo';
-import { NavLink } from 'react-router-dom';
+// import { NavLink, useLocation } from 'react-router-dom';
 import styles from './Header.module.scss';
+import NavLinkWithPrev from '../NavLinkWithPrev';
 
 function Header() {
+  // const location = useLocation();
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -14,28 +16,28 @@ function Header() {
           </span>
           <ul className={styles.nav__list}>
             <li>
-              <NavLink
+              <NavLinkWithPrev
                 to="/stories"
                 className={`${styles.nav__link} click-target-helper`}
               >
                 Stories
-              </NavLink>
+              </NavLinkWithPrev>
             </li>
             <li>
-              <NavLink
+              <NavLinkWithPrev
                 to="/features"
                 className={`${styles.nav__link} click-target-helper`}
               >
                 Features
-              </NavLink>
+              </NavLinkWithPrev>
             </li>
             <li>
-              <NavLink
+              <NavLinkWithPrev
                 to="/pricing"
                 className={`${styles.nav__link} click-target-helper`}
               >
                 Pricing
-              </NavLink>
+              </NavLinkWithPrev>
             </li>
           </ul>
         </nav>

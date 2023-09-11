@@ -2,9 +2,16 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, state } = useLocation();
 
-  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    if (state?.prevLocation) {
+      const heading = document.querySelector('h1');
+      heading.tabIndex = -1;
+      heading.focus();
+    }
+  }, [pathname]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
